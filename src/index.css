@@ -2,71 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #2d1e53;
+  background-image: url(./assets/login.png);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.nav-menu {
+  backdrop-filter: blur(42px);
+}
+.element-with-border {
+  position: relative;
+  border-radius: 10px; /* Adjust as needed */
+  overflow: hidden;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.element-with-border::before {
+  content: '';
+  position: absolute;
+  inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  padding: 2px; /* This creates the border width */
+  background: radial-gradient(69.43% 69.43% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none; /* Allows clicks to pass through to the main element */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.input-shadow {
+  position: relative;
+  backdrop-filter: blur(42px);
+  border-radius: 20px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  /* isolation: isolate; Creates a new stacking context */
+  background:
+  /* linear-gradient(#2d1e53,#2d1e53) padding-box, */
+  linear-gradient( to left, #2d1e53,#000) padding-box,
+  radial-gradient(69.43% 69.43% at 50% 50%, #FFFFFF,rgba(255,255,255,0)) border-box;
+}
+.oauth-provider-box {
+  position: relative;
+  border-radius: 20px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  /* isolation: isolate; Creates a new stacking context */
+  background:
+  linear-gradient(#000,#000) padding-box,
+  radial-gradient(69.43% 69.43% at 50% 50%, #FFFFFF,rgba(255,255,255,0)) border-box;
+  backdrop-filter: blur(42px);
+
+}
+
+.form-bg {
+  backdrop-filter: blur(42px);
 }
