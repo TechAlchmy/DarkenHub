@@ -17,10 +17,19 @@ const Input = ({ label, id, ...rest }: IProps) => {
       >
         {label}
       </label>
-      <input
-        {...rest}
-        className="flex w-full input-shadow px-4 h-[50px] focus:outline-none text-[#A0AEC0] font-jakarta text-sm font-normal rounded-2xl"
-      />
+      {
+        label == "Password" ? 
+        <input
+          type="password"
+          {...rest}
+          className="flex w-full input-shadow px-4 h-[50px] focus:outline-none text-[#A0AEC0] font-jakarta text-sm font-normal rounded-2xl"
+        /> :
+        <input
+          {...rest}
+          className="flex w-full input-shadow px-4 h-[50px] focus:outline-none text-[#A0AEC0] font-jakarta text-sm font-normal rounded-2xl"
+        />
+      }
+      
     </div>
   );
 };

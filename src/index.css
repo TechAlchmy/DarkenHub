@@ -8,7 +8,11 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: #2d1e53;
+}
+
+.auth-page {
   background-image: url(./assets/login.png);
+  padding-top: 2.5rem;
 }
 
 .nav-menu {

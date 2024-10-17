@@ -4,7 +4,7 @@ import NavMenu from "../../components/NavMenu";
 
 function AuthLayout() {
   return (
-    <div className="min-h-screen">
+    <div className="auth-page min-h-screen">
       <NavMenu />
       <div className="container">
         <div className="grid grid-cols-2">

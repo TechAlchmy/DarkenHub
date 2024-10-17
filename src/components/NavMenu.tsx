@@ -5,7 +5,7 @@ import Logo from "./common/Logo";
 
 const NavMenu = () => {
   return (
-    <div className="max-w-[987.5px] w-full mx-auto h-[70px] nav-menu rounded-xl element-with-border flex justify-between items-center px-4 my-10">
+    <div className="max-w-[987.5px] w-full mx-auto h-[70px] nav-menu rounded-xl element-with-border flex justify-between items-center px-4 mb-10">
       <Link to="/">
         <Logo />
       </Link>
