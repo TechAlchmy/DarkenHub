@@ -17,14 +17,14 @@ function Signin() {
 
   useEffect(() => {
     if (localStorage.getItem("authToken"))
-      navigate("/dashboard");
+      navigate("/user/dashboard");
   }, [])
 
   const onSignIn = () => {
-    let data:any = {email, password};
+    let data: any = {email, password};
     dispatch(signIn(data));
     if (authenticated)
-      navigate("/dashboard");
+      navigate("/user/dashboard");
   }
 
   return (

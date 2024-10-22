@@ -7,7 +7,6 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background-color: #2d1e53;
 }
 
 .auth-page {
@@ -63,6 +62,51 @@ body {
 
 }
 
+.provider-box {
+  position: relative;
+  border-radius: 50px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  /* isolation: isolate; Creates a new stacking context */
+  background:
+  linear-gradient(#151718,#151718) padding-box,
+  radial-gradient(69.43% 69.43% at 50% 50%, #FFFFFF,rgba(255,255,255,0)) border-box;
+  backdrop-filter: blur(42px);
+
+}
+
 .form-bg {
   backdrop-filter: blur(42px);
+}
+
+.blurred-gradient-div {
+  width: 480px; /* Adjust the width */
+  height: 280px; /* Adjust the height */
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8));
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px; /* Smooth corners */
+  /* filter: blur(10px); Apply blur effect */
+  backdrop-filter: blur(10px); /* Makes the background blur visible */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: white; /* Adjust text color */
+  overflow: hidden;
+}
+
+.text-bordered {
+  text-shadow: 
+    -1px -1px 0 black,  /* Top-left shadow */
+     1px -1px 0 black,  /* Top-right shadow */
+    -1px  1px 0 black,  /* Bottom-left shadow */
+     1px  1px 0 black;  /* Bottom-right shadow */
+}
+
+.text-white-bordered {
+  text-shadow: 
+    -1px -1px 0 white,  /* Top-left shadow */
+     1px -1px 0 white,  /* Top-right shadow */
+    -1px  1px 0 white,  /* Bottom-left shadow */
+     1px  1px 0 white;  /* Bottom-right shadow */
 }

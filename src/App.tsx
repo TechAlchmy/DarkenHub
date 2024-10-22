@@ -2,8 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signup from "./pages/Signup";
 import AuthLayout from "./components/layouts/AuthLayout";
 import Signin from "./pages/Signin";
-import Dashboard from "./pages/Dashboard";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import UserLayout from "./pages/UserLayout";
+import Dashboard from "./pages/Dashboard";
+import Dota2 from "./pages/Games/Dota2";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +27,18 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/dashboard",
-    element: <Dashboard />
+    path: "/user",
+    element: <UserLayout />,
+    children: [
+      {
+        path: "dashboard",
+        element: <Dashboard />
+      },
+      {
+        path: "dota2",
+        element: <Dota2 />
+      }
+    ]
   }
 ]);
 
