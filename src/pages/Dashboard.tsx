@@ -24,9 +24,12 @@ import LeagueofLegend from "../assets/Picdash/games/leagueoflegend.png"
 import Telegram from "../assets/Picdash/games/telegram.png"
 import TankWar from "../assets/Picdash/games/tankwar.png"
 import ThunderWar from "../assets/Picdash/games/thunderwar.png"
+import TryBaseBackground from "../assets/tryBaseHub/background.png"
+import TopPriceImage from "../assets/toprice/top_price.png"
 
 import GameCards from "../components/GameCards";
 import GameCard from "../components/common/GameCard";
+import TopPrice from "../components/TopPrice";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -73,6 +76,69 @@ const Dashboard = () => {
       name: "World of Tanks",
       description: "Accounts, Riot Points, Top Up, Boosting, Services, Qualification, Coaching, Prime Gaming, Battle Pass, Other",
       path: TankWar,
+    },
+  ]
+
+  const TopPrices = [
+    {
+      name: "item name",
+      direction: 1,
+      rate: 2.52,
+      price: 324.82
+    },
+    {
+      name: "item name",
+      direction: 1,
+      rate: 2.52,
+      price: 324.82
+    },
+    {
+      name: "item name",
+      direction: 1,
+      rate: 2.52,
+      price: 324.82
+    },
+    {
+      name: "item name",
+      direction: 0,
+      rate: 1.23,
+      price: 87.32
+    },
+    {
+      name: "item name",
+      direction: 1,
+      rate: 2.52,
+      price: 324.82
+    },
+    {
+      name: "item name",
+      direction: 1,
+      rate: 2.52,
+      price: 324.82
+    },
+    {
+      name: "item name",
+      direction: 0,
+      rate: 1.23,
+      price: 87.32
+    },
+    {
+      name: "item name",
+      direction: 1,
+      rate: 2.52,
+      price: 324.82
+    },
+    {
+      name: "item name",
+      direction: 1,
+      rate: 2.52,
+      price: 324.82
+    },
+    {
+      name: "item name",
+      direction: 0,
+      rate: 1.23,
+      price: 87.32
     },
   ]
   
@@ -186,6 +252,32 @@ const Dashboard = () => {
       }
       </div>
     </div>
+    <div className="bg-[#040404] px-4">
+      <img src={TopPriceImage} />
+      <div className="flex flex-row gap-4 py-6 relative z-[2] overflow-auto custom-scrollbar">
+      {
+        TopPrices.map((item, index) => {
+          return <div key={index}>
+              <TopPrice name={item.name} rate={item.rate} direction={item.direction} price={item.price} />
+            </div>
+        })
+      }
+      </div>
+    </div>
+    <div className="bg-[#040404] pt-4">
+        <div className="relative">
+          <img src={TryBaseBackground} className="w-full" />
+          <div className="absolute w-full px-24 flex flex-row items-center justify-between top-[56px]">
+            <div className="flex flex-col gap-3">
+              <span className="text-white text-[24px] font-extrabold">Try BaseHub Today</span>
+              <span className="text-white text-[14px]">Start for free, then gorw with your team</span>
+            </div>
+            <div className="cursor-pointer bg-[#FF6C00] rounded-full text-black text-[16px] font-semibold px-8 py-2">
+              Get Started
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
