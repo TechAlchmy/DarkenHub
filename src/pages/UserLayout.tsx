@@ -19,6 +19,8 @@ import MessageIcon from "../assets/userlayout/menu_message.png"
 import BellIcon from "../assets/userlayout/bell.png"
 import ProfileImgTemp from "../assets/userlayout/profileImage.png"
 import DownIcon from "../assets/userlayout/down_icon.png"
+import Footer from "../components/Footer"
+import GlobalChat from "../components/GlobalChat"
 
 const UserLayout = () => {
 
@@ -146,6 +148,12 @@ const UserLayout = () => {
           </div>
         </div>
         <Outlet />
+        <div className="px-12 py-8 bg-black relative z-[2]">
+          <GlobalChat />
+        </div>
+        <div className="px-24 relative z-[2]">
+          <Footer />
+        </div>
       </div>
     </div>
     </>

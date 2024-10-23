@@ -131,7 +131,7 @@ const Dota2 = () => {
         <img src={Effect} className="w-full" />
       </div>
     </div>
-    <div className="relative top-[-2520px] bg-black/[0.4] z-[2] rounded-sm mx-4 px-4 pt-12">
+    <div className="relative mt-[-2520px] bg-black/[0.4] z-[2] rounded-sm mx-4 px-4 pt-12 pb-4 mb-6">
       <div className="flex flex-row gap-8 justify-end">
         <div className="flex flex-row gap-1 items-center cursor-pointer">
           <span className="text-white text-[16px]">Server</span>
@@ -200,7 +200,7 @@ const Dota2 = () => {
         }
       </div>
       <div className="mt-48 px-4">
-        <button className="text-white text-[14px] px-4 py-2 bg-slate-700 rounded shadow-2xl shadow-cyan-500/50">more offers</button>
+        <button className="text-white text-[14px] px-4 py-2 bg-slate-700 rounded shadow-2xl shadow-cyan-500/50 tracking-wider">More Offers</button>
       </div>
       <div className="mt-8 px-4 flex flex-col gap-2">
         <span className="text-white text-[16px] text-bordered">
@@ -212,8 +212,8 @@ const Dota2 = () => {
       </div>
       <div className="mt-8 px-4 flex flex-row">
         <span className="text-white text-[20px] tracking-wider">How to order an MMR boost on</span>
-        <span className="text-[#7879F1] font-extrabold text-[20px] pl-2">Darken</span>
-        <span className="text-[#F5841F] font-extrabold text-[20px]">Hub</span>
+        <span className="text-[#7879F1] font-extrabold text-[20px] tracking-widest pl-2">Darken</span>
+        <span className="text-[#F5841F] font-extrabold text-[20px] tracking-widest">Hub</span>
       </div>
       <div className="mt-8 px-4 flex flex-col gap-2">
         <span className="text-white text-[16px] tracking-wider">Select an offer from the list and contact the booster directly.</span>
