@@ -38,7 +38,7 @@ const TopPrice = ({ name, rate, direction, price, ...rest }: TopPrice) => {
         </div>
       </div>
     </div>
-    </>
+    </> 
   )
 }
 

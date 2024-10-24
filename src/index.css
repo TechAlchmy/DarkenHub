@@ -172,3 +172,21 @@ body {
 .custom-chat-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: linear-gradient(45deg, #161A42, #3b5998);; /* Thumb hover color */
 }
+.border-image-custom1 {
+  border-image-slice: 1; /* Adjust as needed */
+  border-image-width: 1; /* Match this with your border width */
+  border-image-source: linear-gradient(250.57deg, rgba(255, 255, 255, 0.3) 25.87%, rgba(255, 255, 255, 0) 63.04%),
+                       conic-gradient(from 180deg at 51.95% 49.81%, rgba(0, 0, 0, 0.105455) -2.11deg, rgba(51, 231, 255, 0) 131.45deg, #F5D4FF 184.64deg, rgba(51, 157, 255, 0) 252.32deg, rgba(0, 0, 0, 0.0885149) 310.85deg, rgba(0, 0, 0, 0.105455) 357.89deg, rgba(51, 231, 255, 0) 491.45deg);
+}
+
+.custom-background1 {
+  background-image: radial-gradient(45.21% 118.84% at 76.68% 66.67%, #F69CA5 0%, #EA71C5 100%), linear-gradient(180deg, rgba(200, 215, 254, 0.9) -60.85%, rgba(50, 94, 179, 0) 29.56%);
+  background-blend-mode: overlay;
+}
+.border-image-custom {
+  border-style: solid; /* Ensure the border is styled */
+  border-width: 1px; /* Match the border width */
+  border-image-slice: 1; /* Adjust this value as necessary */
+  border-image-source: linear-gradient(250.57deg, rgba(255, 255, 255, 0.3) 25.87%, rgba(255, 255, 255, 0) 63.04%),
+                       conic-gradient(from 180deg at 51.95% 49.81%, rgba(0, 0, 0, 0.105455) -2.11deg, rgba(51, 231, 255, 0) 131.45deg, #F5D4FF 184.64deg, rgba(51, 157, 255, 0) 252.32deg, rgba(0, 0, 0, 0.0885149) 310.85deg, rgba(0, 0, 0, 0.105455) 357.89deg, rgba(51, 231, 255, 0) 491.45deg);
+}
