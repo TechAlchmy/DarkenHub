@@ -6,6 +6,8 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import UserLayout from "./pages/UserLayout";
 import Dashboard from "./pages/Dashboard";
 import Dota2 from "./pages/Games/Dota2";
+import DashboardPro from "./pages/DashboardPro";
+import CarouselComponent from "./components/Dashboard/Slider";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +34,9 @@ const router = createBrowserRouter([
     children: [
       {
         path: "dashboard",
-        element: <Dashboard />
+        element: <DashboardPro />
+        // element: <CarouselComponent />
+
       },
       {
         path: "dota2",

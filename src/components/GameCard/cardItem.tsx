@@ -2,7 +2,7 @@ import { memo } from "react"
 import GameCard1 from "../../assets/Picdash/game_card/game_card_1.png"
 import GameCard2 from "../../assets/Picdash/game_card/game_card_2.png"
 import { GameDetail } from "../../types"
-import Bg1 from "../../assets/Picdash/game_card/Vortex2.png";
+import Card from "../../assets/dashboard/Card.png";
 
 interface props {
   item: GameDetail;
@@ -10,9 +10,12 @@ interface props {
 
 const  CardItem = memo(({item} : props) => {
 
+  const gradientBorderStyle = {
+    backgroundImage: `url(${Card})`
+  }
   return (
-    <div className="bg-card-item bg-current   w-[500px] border border-[#FFFFFF33] h-[300px] overflow-hidden relative gap-4 p-4 rounded-3xl flex flex-row">
-      <img src={Bg1} className="absolute top-0 right-0" alt="" />
+    <div className="w-[420px] border border-[#FFFFFF33] bg-cover backdrop-blur-2xl h-[300px] overflow-hidden relative gap-4 p-4 rounded-3xl flex flex-row" style={gradientBorderStyle}>
+      {/* <img src={Bg1} className="absolute top-0 right-0" alt="" /> */}
       {/* <div className="-z-1 absolute backdrop-blur-custom w-[100px] h-[200px] bottom-0 right-0">
 
       </div> */}

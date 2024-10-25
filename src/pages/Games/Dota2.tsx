@@ -1,11 +1,12 @@
 import Dota2Background from "../../assets/Picdash/games/dota2/dota2.png"
 import DivideLine from "../../assets/Picdash/games/dota2/divide.png"
 import Arcana from "../../assets/Picdash/games/dota2/arcana.png"
-import Effect from "../../assets/Picdash/games/dota2/Mask group.png"
+import Effect from "../../assets/Picdash/games/dota2/App & Mask.png"
 import { memo, useMemo, useState } from "react"
 import Rec from "../../assets/Picdash/games/dota2/non_acvtive.png";
 import ItemMarket from "../../components/Dota2/ItemMarket"
 import Accounts from "../../components/Dota2/accounts"
+import Blue2 from "../../assets/Picdash/games/dota2/blur2.png";
 
 const Dota2 = memo(() => {
 
@@ -28,8 +29,9 @@ const Dota2 = memo(() => {
           <div className="absolute -top-3 z-10 right-0 ">
             <img src={Arcana} alt="" />
           </div>
-          <div className="absolute top-80 left-[-60px] w-full z-[1]">
-            <img src={Effect} className="w-full" alt="" />
+          <div className="absolute top-80 left-[-260px] w-full z-[1]">
+            {/* <img src= alt="" /> */}
+            <img src={Effect} className="w-[1824px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] h-[800px]" alt="" />
           </div>
           <div className="absolute bg-custom-gradient w-full h-[265px] left-0 top-[160px]">
 

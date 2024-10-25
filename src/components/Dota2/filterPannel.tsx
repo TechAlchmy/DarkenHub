@@ -17,7 +17,7 @@ const FilterPannel = memo(() => {
     ]
   }, []);
   return (
-    <div className="bg-filter pb-36 w-1/4 rounded-2xl pt-[26px] py-5 relative">
+    <div className="bg-filter h-[820px] pb-32 w-1/4 rounded-2xl pt-[26px] py-5 relative">
       <div>
         <img src={FilterBg1} className="absolute right-0 top-0" alt="" />
         <img src={FilterBg2} className="absolute bottom-0 left-0" alt="" />
@@ -52,7 +52,7 @@ const FilterPannel = memo(() => {
                     View More 
                 </button>
               ): (
-                <input type="text" className="bg-white opacity-60 p-2 rounded-xl mt-2" placeholder={item.placeholder} />
+                <input type="text" className="bg-white w-[95%] opacity-60 p-2 rounded-xl mt-2" placeholder={item.placeholder} />
               )}
             </div>
           </div>

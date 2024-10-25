@@ -18,3 +18,13 @@ export type tSeller = {
   amount: string;
   premium: boolean
 }
+
+export type tBid = {
+  time: string;
+  heart: number;
+  title: string;
+  price: number;
+  image: string;
+  avatar: string;
+  filled: boolean;
+}
