@@ -28,3 +28,8 @@ export type tBid = {
   avatar: string;
   filled: boolean;
 }
+
+export type tHero = {
+  img: string,
+  name: string
+}

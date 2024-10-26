@@ -65,7 +65,7 @@ const SideBar = () => {
     navigate("/signin");
   }
   return (
-    <div className="w-[360px] relative bg-[#0D0D0D]  op px-6 py-6">
+    <div className="w-[250px] relative bg-[#0D0D0D]  op px-6 py-6">
       <div className="flex flex-row items-center">
         <img src={Dashlogo} alt="" />
         <span className="text-white text-[24px]">arkenhub</span>

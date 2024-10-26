@@ -32,6 +32,7 @@ module.exports = {
         'item-bg1': 'linear-gradient(180deg, rgba(255, 255, 255, 0) -19.57%, rgba(255, 255, 255, 0.6) 98.8%, rgba(255, 255, 255, 0.222222) 130.43%), linear-gradient(180deg, rgba(255, 255, 255, 0) 48.05%, rgba(255, 255, 255, 0.1) 48.9%)',
         'custom-linear': 'linear-gradient(180deg, rgba(46, 51, 90, 0.1) 0%, rgba(28, 27, 51, 0.02) 100%)',
         'custom-radial': 'radial-gradient(146.13% 118.42% at 50% -15.5%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%)',
+        'hero_box': 'linear-gradient(90.13deg, rgba(17, 16, 24, 0) -0.93%, rgba(17, 16, 24, 0.51) 99.93%)',
       },
       backdropBlur: {
         '40': '40px',

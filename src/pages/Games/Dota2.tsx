@@ -4,9 +4,8 @@ import Arcana from "../../assets/Picdash/games/dota2/arcana.png"
 import Effect from "../../assets/Picdash/games/dota2/App & Mask.png"
 import { memo, useMemo, useState } from "react"
 import Rec from "../../assets/Picdash/games/dota2/non_acvtive.png";
+import AccountMarket from "../../components/Dota2/AccountMarket"
 import ItemMarket from "../../components/Dota2/ItemMarket"
-import Accounts from "../../components/Dota2/accounts"
-import Blue2 from "../../assets/Picdash/games/dota2/blur2.png";
 
 const Dota2 = memo(() => {
 
@@ -15,10 +14,10 @@ const Dota2 = memo(() => {
     switch(activeBtn) {
       case 0: return (
         <ItemMarket />
-      );
-      case 1: return (
-        <Accounts />
       )
+      case 1: return (
+        <AccountMarket />
+      );
     }
   }, [activeBtn]);
   return (

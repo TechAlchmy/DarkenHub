@@ -4,10 +4,9 @@ import AuthLayout from "./components/layouts/AuthLayout";
 import Signin from "./pages/Signin";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import UserLayout from "./pages/UserLayout";
-import Dashboard from "./pages/Dashboard";
 import Dota2 from "./pages/Games/Dota2";
 import DashboardPro from "./pages/DashboardPro";
-import CarouselComponent from "./components/Dashboard/Slider";
+import Profile from "./pages/profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "dota2",
         element: <Dota2 />
+      },
+      {
+        path: "profile",
+        element: <Profile />
       }
     ]
   }
