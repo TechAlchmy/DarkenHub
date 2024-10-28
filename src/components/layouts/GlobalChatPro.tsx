@@ -41,10 +41,6 @@ const GlobalChat = ({roomId} : props) => {
     };
   }, [roomId]);
 
-<<<<<<< HEAD
-const GlobalChat = () => {
-=======
-
   const sendMessage = () => {
     if (newMessage.trim()) {
       const msg: IMessage = { roomId, userId: 'user1', message: newMessage, timestamp: new Date() };
