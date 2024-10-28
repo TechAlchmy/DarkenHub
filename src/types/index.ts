@@ -33,3 +33,9 @@ export type tHero = {
   img: string,
   name: string
 }
+
+export interface IMessage {
+  userId: string;
+  message: string;
+  timestamp: Date;
+}
