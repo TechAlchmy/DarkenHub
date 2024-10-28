@@ -242,7 +242,7 @@ const DashboardPro = () => {
             </div>
           </div>
         </div>
-      <GlobalChat />
+      <GlobalChat roomId="dashboard" />
     </div>
   );
 }

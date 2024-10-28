@@ -6,6 +6,7 @@ import { memo, useMemo, useState } from "react"
 import Rec from "../../assets/Picdash/games/dota2/non_acvtive.png";
 import AccountMarket from "../../components/Dota2/AccountMarket"
 import ItemMarket from "../../components/Dota2/ItemMarket"
+import GlobalChat from "../../components/layouts/GlobalChatPro"
 
 const Dota2 = memo(() => {
 
@@ -116,6 +117,7 @@ const Dota2 = memo(() => {
         </div>
       </div>
       {renderGame}
+      <GlobalChat roomId="dota2" />
     </div>
   )
 })
