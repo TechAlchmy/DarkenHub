@@ -4,7 +4,6 @@ import ChatLogo from "../../assets/globalchat/chatIcon.png";
 import ChatCount from "../../assets/globalchat/chat_count.png";
 import smile from "../../assets/globalchat/smile_emoj.png";
 
-
 const GlobalChat = () => {
 
   return (
