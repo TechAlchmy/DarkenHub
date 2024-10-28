@@ -33,6 +33,7 @@ module.exports = {
         'custom-linear': 'linear-gradient(180deg, rgba(46, 51, 90, 0.1) 0%, rgba(28, 27, 51, 0.02) 100%)',
         'custom-radial': 'radial-gradient(146.13% 118.42% at 50% -15.5%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%)',
         'hero_box': 'linear-gradient(90.13deg, rgba(17, 16, 24, 0) -0.93%, rgba(17, 16, 24, 0.51) 99.93%)',
+        'global-chat': 'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(150.22deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 22.44%)',
       },
       backdropBlur: {
         '40': '40px',

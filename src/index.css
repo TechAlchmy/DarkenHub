@@ -240,3 +240,27 @@ background: transparent;
 .MuiDialogContent-root {
   padding: 0%!important;
 }
+
+
+.text-border1 {
+  color: white; /* Text color */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #0000004D;
+}
+
+.custom_input {
+  padding: 24px!important;
+  padding-right: 122px!important;
+  font-size: 16px!important;
+  border: 1px solid #FFFFFF66!important;
+  color: #FFFFFF66!important;
+  border-radius: 4px!important;
+  width: 100%;
+  box-sizing: border-box!important;
+}
+
+.custom_input:focus {
+  outline: none!important;
+  border: 1px solid #FFFFFF66!important;
+}
+

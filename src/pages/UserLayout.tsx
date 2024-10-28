@@ -25,12 +25,11 @@ const UserLayout = () => {
       <div className="w-[calc(100%-250px)] min-h-screen bg-[#0D0D0D]">
         <DashBoardHearder />
         <Outlet />
-        <GlobalChat />
         <div className="px-24 relative z-[2]">
           <Footer />
         </div>
       </div>
-      <div className="absolute w-full h-full left-0 top-0 overflow-hidden -z-1">
+      <div className="absolute w-full px-5 h-full left-0 top-0 overflow-hidden -z-1">
         <img className="w-full h-[1440px] left-[200px] top-[-200px] relative" alt="" src={LayoutBg} />
         <img className="w-full h-[1440px] top-[-400px] relative" alt="" src={LayoutBg} />  
         <img className="w-full h-[1440px] left-[200px] top-[-600px] relative" alt="" src={LayoutBg} />

@@ -25,6 +25,7 @@ import yellowEffect from "../assets/dashboard/yellow_effect.png"
 
 import GameCard from "../components/common/GameCard";
 import TopPrice from "../components/TopPrice";
+import GlobalChat from "../components/layouts/GlobalChatPro";
 const DashboardPro = () => {
 
   const navigate = useNavigate();
@@ -241,6 +242,7 @@ const DashboardPro = () => {
             </div>
           </div>
         </div>
+      <GlobalChat />
     </div>
   );
 }
