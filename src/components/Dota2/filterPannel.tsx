@@ -1,12 +1,8 @@
 import { memo, useMemo, useState } from "react";
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Button from '@mui/material/Button';
 
 import FilterBg1 from '../../assets/Picdash/games/dota2/filter_bg.png';
 import FilterBg2 from '../../assets/Picdash/games/dota2/fliterBg2.png';

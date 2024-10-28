@@ -8,22 +8,30 @@ import { useEffect, useRef, useState } from "react";
 import { IMessage } from "../../types";
 import { useSelector } from "react-redux";
 
+interface props {
+  roomId: string
+}
+
 const socket = io('http://localhost:5500');
-const GlobalChat = () => {
+const GlobalChat = ({roomId} : props) => {
 
   const [messages, setMessages] = useState<IMessage[]>([]);
   const [newMessage, setNewMessage] = useState('');
   const messagesEndRef = useRef(null);
   const username = useSelector((state: any) => state.auth.name);
   console.log(username);
+  
   useEffect(() => {
-    // Receive chat history when connected
-    socket.on('chat history', (history: IMessage[]) => {
+    // Join the specified room
+    socket.emit('joinRoom', roomId);
+
+    // Receive chat history for the room
+    socket.on('chat history', (history) => {
       setMessages(history);
     });
 
     // Receive new messages
-    socket.on('chat message', (msg: IMessage) => {
+    socket.on('chat message', (msg) => {
       setMessages((prevMessages) => [...prevMessages, msg]);
     });
 
@@ -31,11 +39,12 @@ const GlobalChat = () => {
       socket.off('chat history');
       socket.off('chat message');
     };
-  }, []);
+  }, [roomId]);
+
 
   const sendMessage = () => {
     if (newMessage.trim()) {
-      const msg: IMessage = { userId: 'user1', message: newMessage, timestamp: new Date() };
+      const msg: IMessage = { roomId, userId: 'user1', message: newMessage, timestamp: new Date() };
       socket.emit('chat message', msg);
       setNewMessage('');
     }
