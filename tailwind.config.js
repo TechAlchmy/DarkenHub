@@ -36,11 +36,30 @@ module.exports = {
         'global-chat': 'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(150.22deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 22.44%)',
         'privacy': 'linear-gradient(90.13deg, rgba(17, 16, 24, 0) -0.93%, rgba(17, 16, 24, 0.51) 99.93%)',
         'privacy-btn': 'linear-gradient(180deg, rgba(61, 66, 68, 0) -40.91%, rgba(158, 170, 176, 0.62) 132.95%)',
+        'profile_user': 'linear-gradient(180deg, rgba(46, 51, 90, 0) 0%, rgba(28, 27, 51, 0.1) 100%), radial-gradient(146.13% 118.42% at 50% -15.5%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 99.59%)',
+        'profile_user1': 'background: radial-gradient(146.13% 118.42% at 50% -15.5%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.16) 100%)',
+        'profile_chat': 'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),linear-gradient(150.22deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 22.44%)',
+        'service_bg': 'linear-gradient(91.24deg, rgba(255, 255, 255, 0.3) 1.74%, rgba(255, 255, 255, 0.15) 101.68%)',
+        'view-more': 'linear-gradient(180deg, rgba(255, 255, 255, 0) -19.57%, rgba(255, 255, 255, 0.6) 98.8%, rgba(255, 255, 255, 0.222222) 130.43%), linear-gradient(180deg, rgba(255, 255, 255, 0) 48.05%, rgba(255, 255, 255, 0.1) 48.9%)',
+        'review': 'linear-gradient(180deg, #1E1D1A 0%, #000000 100%)',
+        'review-seller': 'linear-gradient(180deg, rgba(49, 58, 91, 0.1) 0%, rgba(49, 58, 91, 0.3) 49.84%, rgba(49, 58, 91, 0) 96.11%)',
+        'service': 'linear-gradient(270deg, rgba(255, 255, 255, 0.1) 57.6%, rgba(255, 255, 255, 0) 91.06%)',
+
       },
       backdropBlur: {
         '40': '40px',
         '10': '10px',
-        '29.7': '29.692445755004883px' 
+        '29.7': '29.692445755004883px',
+        '30': '30px', 
+        '200': '200px',
+
+
+      },
+      boxShadow: {
+        'custom-1': '0px 30px 60px 0px rgba(0, 0, 0, 0.1)',
+        'custom-2': '0px 15px 30px 0px rgba(0, 0, 0, 0.05)',
+        'custom-3': '0px 5px 10px 0px rgba(0, 0, 0, 0.05)',
+        'custom-inset': 'inset 0px 0px 100px 0px rgba(204, 215, 255, 0.15)',
       },
       borderImage: {
         'custom': 'linear-gradient(180deg, rgba(39, 55, 207, 0.4) 17.19%, rgba(101, 98, 251, 0.77) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, rgba(39, 55, 207, 0) -4.69%, rgba(189, 252, 254, 0.3) 100%)',

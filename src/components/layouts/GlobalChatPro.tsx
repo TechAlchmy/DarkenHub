@@ -57,7 +57,6 @@ const GlobalChat = ({roomId} : props) => {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
->>>>>>> origin/feature/gc_chat
 
   return (
     <div className="w-full h-[340px] bg-global-chat p-5 relative z-10 bg-[#0D0D0D]">
