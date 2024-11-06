@@ -1,8 +1,11 @@
-import { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
+import axios from "axios";
+
 import ArrowRight from "../../../assets/Picdash/games/dota2/Item Market/Arrow Right.png";
 import StrengthIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail.png";
 import AgileIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail (1).png";
 import IntelICon from "../../../assets/Picdash/games/dota2/Item Market/Detail (2).png";
+
 import Ababbon from "../../../assets/Picdash/games/dota2/Item Market/strength/abaddon.png";
 import alchi from "../../../assets/Picdash/games/dota2/Item Market/strength/Alchemist.png";
 import axe from "../../../assets/Picdash/games/dota2/Item Market/strength/axe.png";
@@ -130,13 +133,56 @@ import Intelihero42 from "../../../assets/Picdash/games/dota2/Item Market/Inteli
 import Intelihero43 from "../../../assets/Picdash/games/dota2/Item Market/Inteli/Hero card-42.png";
 
 import HeroCategory from "./HeroCategory";
-
 interface props {
   onClose: () => void
 }
 
-const HeroBox = ({onClose} : props) => {
+// Define the Hero interface
+interface Hero {
+  id: number; // Assuming there is an id or similar property
+  name: string; // Assuming there is a name or similar property
+  type: string; // This can be 'str', 'agi', or 'int'
+}
 
+// Define the structure of the category
+interface Category {
+  title: string;
+  cateImg: string | any; // Adjust type based on your actual image type
+  heros: Hero[];
+}
+
+// Initialize the res array with the correct type
+
+
+
+const HeroBox = ({onClose} : props) => {
+  const [heroData, setHeroData] = useState<Category[]>([]);
+
+  useEffect(() => {
+    const fetchHeroData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5500/dota2/heroes`);
+        const data = response.data.data;
+        console.log(data)
+        const res: Category[] = [
+          { title: 'Strength', cateImg: StrengthIcon, heros: [] },
+          { title: 'Agility', cateImg: AgileIcon, heros: [] },
+          { title: 'Intelligence', cateImg: IntelICon, heros: [] }
+        ];
+        data.forEach((obj: any) => {
+          if (obj.type === 'str') res[0].heros.push(obj);
+          if (obj.type === 'agi') res[1].heros.push(obj);
+          if (obj.type === 'int') res[2].heros.push(obj);
+        });
+        setHeroData(res);
+      } catch (error) {
+        console.error('Error fetching hero data:', error);
+      }
+    };
+
+    fetchHeroData();
+  }, []);
+  
   const data = useMemo(() => {
     return [
       {
@@ -290,7 +336,7 @@ const HeroBox = ({onClose} : props) => {
         <img src={ArrowRight} alt="" />
       </div>
       <div className="mt-3 grid grid-cols-3 gap-10">
-        {data.map(item => (
+        {heroData.map(item => (
           <HeroCategory title={item.title} cateImg={item.cateImg} heros={item.heros} />
         ))}
       </div>

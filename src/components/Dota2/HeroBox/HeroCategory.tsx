@@ -4,7 +4,7 @@ import HeroItem from "./HeroItem";
 interface props {
   title: string,
   cateImg: string,
-  heros: tHero[];
+  heros: any[];
 }
 const HeroCategory = ({title, heros, cateImg} : props) => {
 

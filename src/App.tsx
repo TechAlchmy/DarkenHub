@@ -8,6 +8,7 @@ import Dota2 from "./pages/Games/Dota2";
 import DashboardPro from "./pages/DashboardPro";
 import Profile from "./pages/profile/Profile";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
