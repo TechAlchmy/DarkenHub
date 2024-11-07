@@ -4,8 +4,8 @@ const PrivacyContent = () => {
 
   return (
     <div className="h-[600px] overflow-y-scroll w-full mt-2">
-      {privacyData.map((data) => (
-        <PrivacySection data={data} />
+      {privacyData.map((data, index) => (
+        <PrivacySection key={index} data={data} />
       ))}
     </div>
   );
@@ -27,8 +27,8 @@ const PrivacySection = ({data}: props) => {
             Consequences
           </p>
         </div>
-        {data.data.map((item: any) => (
-          <div className='mt-2 grid grid-cols-2 py-6 p-2 gap-2 font-inter font-[500] text-[11px] leading-4 '>
+        {data.data.map((item: any, index: number) => (
+          <div key={index} className='mt-2 grid grid-cols-2 py-6 p-2 gap-2 font-inter font-[500] text-[11px] leading-4 '>
             <p>
               {item.violation}
             </p>

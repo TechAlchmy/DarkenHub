@@ -91,8 +91,8 @@ const ServiceCom = ({owner} : props) => {
             flex gap-3
           "
           >
-            {gameServices.map((service) => (
-              <GameServiceItem service={service} />
+            {gameServices.map((service, index) => (
+              <GameServiceItem key={index} service={service} />
             ))}
         </div>
       </div>

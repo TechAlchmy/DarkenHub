@@ -19,7 +19,6 @@ const GlobalChat = ({roomId} : props) => {
   const [newMessage, setNewMessage] = useState('');
   const messagesEndRef = useRef(null);
   const username = useSelector((state: any) => state.auth.name);
-  console.log(username);
   
   useEffect(() => {
     // Join the specified room

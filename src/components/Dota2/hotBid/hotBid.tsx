@@ -75,8 +75,8 @@ const HotBids = () => {
         🔥 Hot Bids
       </div>
       <div className="grid grid-cols-6 gap-6 mt-5">
-        {bids.map((bid) => (
-          <BidItem bid={bid} />
+        {bids.map((bid, index) => (
+          <BidItem key={index} bid={bid} />
         ))}
       </div>
     </div>

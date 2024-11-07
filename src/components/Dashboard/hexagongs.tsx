@@ -34,10 +34,10 @@ const Hexagons = () => {
   return (
     <div className="flex items-center  -mt-40 relative -z-1">
       {
-        data.map((tmp) => (
-          <div className="gap-5 flex flex-col">
-            {tmp.items.map((txt) => (
-              <Hexagon image={txt} />
+        data.map((tmp, index) => (
+          <div key={index} className="gap-5 flex flex-col">
+            {tmp.items.map((txt, index) => (
+              <Hexagon key={index} image={txt} />
             ))}
           </div>
         ))

@@ -209,7 +209,7 @@ const DashboardPro = () => {
         <div className="grid grid-cols-3 mt-4 px-8">
         {
           GameList.map((item, index) => {
-            return <GameCard short={item.short} name={item.name} description={item.description} path={item.path} /> 
+            return <GameCard key={index} short={item.short} name={item.name} description={item.description} path={item.path} /> 
           })
         }
         </div>

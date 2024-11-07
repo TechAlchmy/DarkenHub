@@ -131,15 +131,15 @@ const AccountMarket = memo(() => {
         </div>
       </div>
       <div className="px-4 mt-2">
-        <tr className="text-white text-[16px]">
-          <th className="text-bordered">Server</th>
-          <th className="text-bordered">Salesman</th>
-          <th className="text-bordered">Description</th>
-          <th className="text-bordered">Price</th>
-        </tr>
+        <div className="text-white text-[16px] flex justify-around">
+          <p className="text-bordered w-1/12">Server</p>
+          <p className="text-bordered w-4/12">Salesman</p>
+          <p className="text-bordered w-3/12">Description</p>
+          <p className="text-bordered w-3/12">Price</p>
+        </div>
         {
-          gameServers.map((item) => {
-            return <div className="mt-4">
+          gameServers.map((item, index) => {
+            return <div key={`${item.server}-${index}`} className="mt-4">
               <GameServer server={item.server} salename={item.salename} review={item.review} description={item.description} price={item.price} color={item.color} />
             </div>
           })

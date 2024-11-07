@@ -236,8 +236,8 @@ const ItemsCom = () => {
   return (
     <div className="mt-16">
       <div className="grid item-scrollbar grid-cols-6 gap-6 h-[350px] pl-2 overflow-y-scroll">
-        {items.map((item) => (
-          <ItemCom item={item} />
+        {items.map((item, index) => (
+          <ItemCom key={index} item={item} />
         ))}
       </div>
       <div className="flex gap-20 mt-5 justify-center">

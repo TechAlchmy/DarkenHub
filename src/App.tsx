@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signup from "./pages/Signup";
 import AuthLayout from "./components/layouts/AuthLayout";
+import SteamCallback from "./components/Dota2/SteamCallback";
 import Signin from "./pages/Signin";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import UserLayout from "./pages/UserLayout";
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         element: <Profile />
       }
     ]
+  },
+  {
+    path: "/steamCallBack",
+    element: <SteamCallback />
   }
 ]);
 

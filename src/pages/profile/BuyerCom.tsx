@@ -203,8 +203,9 @@ const BuyerCom = ({owner} : props) => {
               style={gradientBorderStyle}
             >
               <div className="flex gap-6">
-                {services.map((service) => (
+                {services.map((service, index) => (
                   <GameServiceItem 
+                    key={index}
                     service={service} 
                 />
                 ))}

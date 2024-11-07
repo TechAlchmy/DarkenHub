@@ -40,8 +40,8 @@ const ReviewCom = () => {
         rounded-t-[32px]
       "
     >
-      {reviews.map((review) => (
-        <ReviewItem review={review} />
+      {reviews.map((review, index) => (
+        <ReviewItem key={index} review={review} />
       ))}
 
     </div>
@@ -90,7 +90,8 @@ const ReviewItem = ({review} : props) => {
             className="flex"
           >
             {Array.from({length: review.star}).map((_, index) => (
-              <div
+              <div 
+                key={index}
                 className="w-6 h-6 mt-2"
               >
                 <img src={Star} alt="" />

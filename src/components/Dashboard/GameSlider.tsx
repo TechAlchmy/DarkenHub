@@ -61,8 +61,8 @@ const GameSlider = () => {
   return (
     <div className="carousel -ml-[34rem]">
       {
-        games.map((item) => (
-          <div className="carousel-item" style={{opacity: 1}}>
+        games.map((item, index) => (
+          <div key={index} className="carousel-item" style={{opacity: 1}}>
             <CardItem item={item} />
           </div>
         ))

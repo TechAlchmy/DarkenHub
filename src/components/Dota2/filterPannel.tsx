@@ -58,7 +58,7 @@ const FilterPannel = memo(() => {
         </div>
         <div className="px-10 mt-10 flex flex-col gap-4">
           {filters.map((item, index) => (
-            <div className="py-3 rounded-bl-none rounded-tl-none flex gap-12 items-center border-l-0 border rounded-xl border-custom1 border-image-custom1">
+            <div key={index} className="py-3 rounded-bl-none rounded-tl-none flex gap-12 items-center border-l-0 border rounded-xl border-custom1 border-image-custom1">
               <div className={`-m-7 rounded-full p-5 ${index == 0 ? 'custom-background1' : 'bg-filter1'}`}>
                 <img src={item.icon} alt="" />
               </div>

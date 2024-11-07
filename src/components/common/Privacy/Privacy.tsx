@@ -50,7 +50,7 @@ const Privacy = ({open} : props) => {
             <p className="text-white flex items-center gap-2">
               Please read our rules and accept the terms. 
               <svg className="mt-1" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.33301 12.3332L6.66634 6.99984L1.33301 1.6665" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.33301 12.3332L6.66634 6.99984L1.33301 1.6665" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </p>
           </div>

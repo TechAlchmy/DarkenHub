@@ -78,8 +78,8 @@ const SideBar = () => {
         </div>
       </div>
       {
-        menus.map((key, index) => {
-          return <DashboardMenu short={menus[index].short} source={menus[index].source} name={menus[index].name} />
+        menus.map((menu, index) => {
+          return <DashboardMenu key={menu.short} short={menus[index].short} source={menus[index].source} name={menus[index].name} />
         })
       }
       <div className="mt-48">

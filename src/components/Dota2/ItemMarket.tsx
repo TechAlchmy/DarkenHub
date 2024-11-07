@@ -147,8 +147,8 @@ const ItemMarket = memo(() => {
           <FilterPannel />
           <div className="pl-5 w-3/4">
               <div className="grid grid-cols-2 gap-10">
-                {highLights.map((item) => (
-                  <PlaceBidItem data={item} />
+                {highLights.map((item, index) => (
+                  <PlaceBidItem key={index} data={item} />
                 ))}
               </div>
               <div className="mt-5">
@@ -158,8 +158,8 @@ const ItemMarket = memo(() => {
                 </div> 
                 <div className="flex flex-row gap-8 py-6 relative z-[2] overflow-auto custom-scrollbar">
                 {
-                  TopSellers.map((item) => (
-                    <TopSellerItem seller={item} />
+                  TopSellers.map((item, index) => (
+                    <TopSellerItem key={index} seller={item} />
                   ))
                 }
                 </div> 

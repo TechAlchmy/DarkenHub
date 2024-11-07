@@ -75,7 +75,7 @@ const GlobalChat = () => {
       {
         messages.map((item, index) => {
           return <>
-            <div className="flex flex-row gap-2 items-end">
+            <div key={index} className="flex flex-row gap-2 items-end">
               <img src={smallChatIcon} />
               <div className="mt-2 bg-zinc-800 rounded-md px-2 py-2 text-white text-[13px]">{item.message}</div>
             </div>

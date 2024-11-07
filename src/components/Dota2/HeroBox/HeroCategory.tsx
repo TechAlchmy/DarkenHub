@@ -1,4 +1,3 @@
-import { tHero } from "../../../types";
 import HeroItem from "./HeroItem";
 
 interface props {
@@ -6,7 +5,7 @@ interface props {
   cateImg: string,
   heros: any[];
 }
-const HeroCategory = ({title, heros, cateImg} : props) => {
+const HeroCategory = ({ heros, cateImg } : props) => {
 
   return (
     <div className="px-2">
@@ -18,8 +17,8 @@ const HeroCategory = ({title, heros, cateImg} : props) => {
         <div className="bg-[#FFFFFF33] h-[1px] w-2/5"></div>
       </div>
       <div className="grid grid-cols-6 gap-0">
-        {heros.map((hero) => (
-          <HeroItem hero={hero} />
+        {heros.map((hero, index) => (
+          <HeroItem key={index} hero={hero} />
         ))}
       </div>
     </div>
