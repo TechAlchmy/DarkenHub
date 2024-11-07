@@ -1,22 +1,24 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import loadingspinner from '../../assets/lazy_loading.gif'
-import './steamCallBack.css'
+import './steamCallBack.css';
 
 const SteamCallback = () => {
     const navigate = useNavigate();
+    const isFirst = useRef(false);
+
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const identity = params.get('openid.claimed_id');
-
-        if (identity) {
+        
+        if (identity && !isFirst.current) {
+            isFirst.current = true;
             const userData = {
                 steamId: identity.split('/').pop(), // Extract Steam ID from URL
                 // You can add more user info if needed
             };
 
             // Send user data to backend
-            fetch('http://localhost:5500/auth/steam/login', {
+            fetch(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/steam/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,20 +27,25 @@ const SteamCallback = () => {
             })
             .then(response => response.json())
             .then(data => {
-              if(data.success === true) {
-                localStorage.setItem('authToken', data.token);
-                navigate('/user/dashboard');
-              }else {
-                navigate('/signin');
-              }
+                if (data.success === true) {
+                    localStorage.setItem('authToken', data.token);
+                    navigate('/user/dashboard');
+                } else {
+                    navigate('/signin');
+                }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                console.error('Error:', error);
+                navigate('/signin'); // Optionally navigate on error
+            });
         }
-    }, []);
+    }, []); // Add hasFetched as a dependency
 
-    return <div className={`w-full h-screen flex justify-center items-center bg-loading bg-cover`}>
-      <img src={`${loadingspinner}`} className='w-[100px] h-[100px]' alt="loadingSpinner" />
-    </div>;
+    return (
+        <div className={`w-full h-screen flex justify-center items-center bg-loading bg-cover`}>
+            <p className="loader"></p>
+        </div>
+    );
 };
 
 export default SteamCallback;

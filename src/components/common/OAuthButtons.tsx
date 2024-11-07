@@ -37,9 +37,8 @@ const OAuthButtons = () => {
 
   const onSteamLogin = () => {
     const steamOpenIDUrl = 'https://steamcommunity.com/openid/login';
-    const redirectUrl = ('http://localhost:5173/steamcallback'); // Update this as needed
-    const realm = ('http://localhost:5173/'); // Update this to match your application's URL
-    
+    const redirectUrl = (`${import.meta.env.VITE_APP_FRONT_URL}/steamcallback`); // Update this as needed
+    const realm = (`${import.meta.env.VITE_APP_FRONT_URL}`); // Update this to match your application's URL
     const params = new URLSearchParams({
         'openid.ns': 'http://specs.openid.net/auth/2.0',
         'openid.mode': 'checkid_setup',
@@ -60,8 +59,6 @@ const OAuthButtons = () => {
     
     // Combine the base URL with the parameters
     const openIDLoginUrl = `${steamOpenIDUrl}?${params.toString()}`;
-  
-    console.log(`${steamOpenIDUrl}?${params.toString()}`);
   
     //window.location.href = `${steamOpenIDUrl}?${params.toString()}`;
     window.location.href = openIDLoginUrl

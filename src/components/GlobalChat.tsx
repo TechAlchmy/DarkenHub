@@ -4,7 +4,8 @@ import divideLine from "../assets/globalchat/Spacer.png"
 import smileEmoj from "../assets/globalchat/smile_emoj.png"
 import scoreBoard from "../assets/globalchat/chat_count.png"
 import smallChatIcon from "../assets/globalchat/smallChatIcon.png"
-import { useEffect, useRef, useState } from "react"
+// import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import io from "socket.io-client"
 
 const socket = io(`${import.meta.env.VITE_APP_LOCAL_URL}`);
@@ -21,12 +22,12 @@ const GlobalChat = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [letterCount, setLetterCount] = useState(241);
 
-  const chatRef = useRef<HTMLDivElement | null>(null);
+  // const chatRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (chatRef.current) {
-      chatRef.current.scrollTop = chatRef.current.scrollHeight;
-    }
+    // if (chatRef.current) {
+    //   chatRef.current.scrollTop = chatRef.current.scrollHeight;
+    // }
   }, [messages]);
 
   useEffect(() => {
@@ -71,7 +72,8 @@ const GlobalChat = () => {
       <div className="mt-4 mb-1">
         <img src={divideLine} className="w-full" />
       </div>
-      <div ref={chatRef} className="chat_area min-h-[300px] max-h-[300px] border border-[1px] border-slate-500 rounded px-3 py-2 overflow-auto custom-chat-scrollbar">
+      {/* <div ref={chatRef} className="chat_area min-h-[300px] max-h-[300px] border border-[1px] border-slate-500 rounded px-3 py-2 overflow-auto custom-chat-scrollbar"> */}
+      <div className="chat_area min-h-[300px] max-h-[300px] border-[1px] border-slate-500 rounded px-3 py-2 overflow-auto custom-chat-scrollbar">
       {
         messages.map((item, index) => {
           return <>

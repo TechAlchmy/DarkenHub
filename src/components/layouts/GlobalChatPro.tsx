@@ -6,19 +6,19 @@ import ChatCount from "../../assets/globalchat/chat_count.png";
 import smile from "../../assets/globalchat/smile_emoj.png";
 import { useEffect, useRef, useState } from "react";
 import { IMessage } from "../../types";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 interface props {
   roomId: string
 }
 
-const socket = io('http://localhost:5500');
+const socket = io(`${import.meta.env.VITE_APP_LOCAL_URL}`);
 const GlobalChat = ({roomId} : props) => {
 
   const [messages, setMessages] = useState<IMessage[]>([]);
   const [newMessage, setNewMessage] = useState('');
   const messagesEndRef = useRef(null);
-  const username = useSelector((state: any) => state.auth.name);
+  // const username = useSelector((state: any) => state.auth.name);
   
   useEffect(() => {
     // Join the specified room
@@ -54,7 +54,7 @@ const GlobalChat = ({roomId} : props) => {
     }
   };
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   return (

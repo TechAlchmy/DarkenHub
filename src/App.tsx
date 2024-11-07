@@ -34,6 +34,12 @@ const router = createBrowserRouter([
     element: <UserLayout />,
     children: [
       {
+        path: "/user",
+        element: <DashboardPro />
+        // element: <CarouselComponent />
+
+      },
+      {
         path: "dashboard",
         element: <DashboardPro />
         // element: <CarouselComponent />
