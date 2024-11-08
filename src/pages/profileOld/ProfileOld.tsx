@@ -1,12 +1,12 @@
 import { useState } from "react";
 import BuyerCom from "./BuyerCom";
 
-const Profile = () => {
-  const [index, setIndex] = useState(1);
+const ProfileOld = () => {
+  const [index] = useState(1);
 
   const render = () => {
 
-    switch(index) {
+    switch (index) {
       case 0:
         return <BuyerCom />
       case 1:
@@ -18,4 +18,4 @@ const Profile = () => {
   );
 }
 
-export default Profile;
+export default ProfileOld;

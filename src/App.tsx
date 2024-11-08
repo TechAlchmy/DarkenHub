@@ -7,7 +7,8 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import UserLayout from "./pages/UserLayout";
 import Dota2 from "./pages/Games/Dota2";
 import DashboardPro from "./pages/DashboardPro";
-import Profile from "./pages/profile/Profile";
+// import ProfileOld from "./pages/profileOld/ProfileOld";
+import Profile from "./pages/profile/profile";
 
 
 const router = createBrowserRouter([
@@ -49,10 +50,14 @@ const router = createBrowserRouter([
         path: "dota2",
         element: <Dota2 />
       },
+      // {
+      //   path: "profileOld",
+      //   element: <ProfileOld />
+      // },
       {
         path: "profile",
         element: <Profile />
-      }
+      },
     ]
   },
   {

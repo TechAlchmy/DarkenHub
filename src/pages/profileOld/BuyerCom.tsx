@@ -1,21 +1,21 @@
 import { useMemo } from "react";
 
-import Dot from "../../assets/profile/dot.png";
-import Profile from "../../assets/profile/profileImage.png";
-import Bg1 from "../../assets/profile/bg1.png";
-import Bg2 from "../../assets/profile/bg2.png";
-import Circle from "../../assets/profile/Image.png";
-import Avarta from "../../assets/profile/Avatar Image.png";
-import verified from "../../assets/profile/Icon - Verification.png";
-import Name from "../../assets/profile/Group 1874.png"
+import Dot from "../../assets/profileOld/dot.png";
+import Profile from "../../assets/profileOld/profileImage.png";
+import Bg1 from "../../assets/profileOld/bg1.png";
+// import Bg2 from "../../assets/profileOld/bg2.png";
+import Circle from "../../assets/profileOld/Image.png";
+import Avarta from "../../assets/profileOld/Avatar Image.png";
+import verified from "../../assets/profileOld/Icon - Verification.png";
+import Name from "../../assets/profileOld/Group 1874.png"
 import Chat from "./Chat";
-import Apex from "../../assets/profile/Apex-Legends-Emblem 1.png";
-import Dota2 from "../../assets/profile/dota-2-logo-A8CAC9B4C9-seeklogo 1.png";
-import star from "../../assets/profile/star.png"
-import MostWatched from "../../assets/profile/most-watched.png";
-import Crown from "../../assets/profile/crown-lv-50.png";
-import Progress  from "../../assets/profile/Progress Ring.png";
-import Symbol  from "../../assets/profile/Symbol.png";
+import Apex from "../../assets/profileOld/Apex-Legends-Emblem 1.png";
+import Dota2 from "../../assets/profileOld/dota-2-logo-A8CAC9B4C9-seeklogo 1.png";
+import star from "../../assets/profileOld/star.png"
+import MostWatched from "../../assets/profileOld/most-watched.png";
+import Crown from "../../assets/profileOld/crown-lv-50.png";
+import Progress from "../../assets/profileOld/Progress Ring.png";
+import Symbol from "../../assets/profileOld/Symbol.png";
 import ReviewCom from "./ReviewCom";
 import ServiceCom, { GameServiceItem } from "./ServiceCom";
 import EditButton from "../../components/common/EditButton";
@@ -24,8 +24,8 @@ interface props {
   owner?: boolean
 }
 
-const BuyerCom = ({owner} : props) => {
-  
+const BuyerCom = ({ owner }: props) => {
+
   const gradientBorderStyle = {
     backgroundImage: `url(${Dot})`
   }
@@ -34,7 +34,7 @@ const BuyerCom = ({owner} : props) => {
     backgroundImage: `url(${Circle})`
   }
 
- 
+
 
   const services = useMemo(() => {
     return [
@@ -53,7 +53,7 @@ const BuyerCom = ({owner} : props) => {
   return (
     <div className="flex justify-between pl-3">
       <div className="w-[620px]">
-        <div 
+        <div
           className="
             relative
           "
@@ -84,7 +84,7 @@ const BuyerCom = ({owner} : props) => {
             shadow-custom-inset
             "
           >
-            <div 
+            <div
               className="w-full h-[340px] relative bg-profile_user1 bg-opacity-20 border-[#FFFFFF4D] rounded-2xl border"
               style={gradientBorderStyle}
             >
@@ -143,7 +143,7 @@ const BuyerCom = ({owner} : props) => {
                     leading-[14px]
                   "
                 >
-                    Online
+                  Online
                 </p>
               </div>
               <div
@@ -178,7 +178,7 @@ const BuyerCom = ({owner} : props) => {
                       h-[160px]
                       relative
                     "
-                  > 
+                  >
                     <img src={Avarta} alt="" />
                     <img src={verified} className="absolute left-3 top-3" alt="" />
                     <img src={Name} className="absolute left-0 -bottom-6" alt="" />
@@ -204,10 +204,10 @@ const BuyerCom = ({owner} : props) => {
             >
               <div className="flex gap-6">
                 {services.map((service, index) => (
-                  <GameServiceItem 
+                  <GameServiceItem
                     key={index}
-                    service={service} 
-                />
+                    service={service}
+                  />
                 ))}
               </div>
 
@@ -241,7 +241,7 @@ const BuyerCom = ({owner} : props) => {
                   <div className="w-6 h-6">
                     <img src={star} alt="" />
                   </div>
-                 
+
                 </div>
               </div>
 
@@ -252,7 +252,7 @@ const BuyerCom = ({owner} : props) => {
                   gap-2
                 "
               >
-                <p 
+                <p
                   className="
                     font-[600]
                     text-[14px]
@@ -276,7 +276,7 @@ const BuyerCom = ({owner} : props) => {
                     "
                   >
                     <img src={MostWatched} alt="" />
-                  </div> 
+                  </div>
                   <div
                     className="
                       w-10
@@ -284,7 +284,7 @@ const BuyerCom = ({owner} : props) => {
                     "
                   >
                     <img src={Crown} alt="" />
-                  </div>  
+                  </div>
                 </div>
               </div>
             </div>
@@ -320,13 +320,13 @@ const BuyerCom = ({owner} : props) => {
                 "
               >
                 <img src={Symbol} alt="" />
-              </div>  
+              </div>
             </div>
           </div>
         </div>
         <Chat />
       </div>
-      <div 
+      <div
         className="
           w-[950px]
           flex

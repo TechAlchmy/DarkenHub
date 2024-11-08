@@ -18,6 +18,7 @@ module.exports = {
         center: true,
       },
       backgroundImage: {
+        'profile-process': 'radial-gradient(146.13% 118.42% at 50% -15.5%, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(180deg, rgba(46, 51, 90, 0.2) 0%, rgba(28, 27, 51, 0.12) 100%)',
         'card-item': 'radial-gradient(146.13% 118.42% at 50% -15.5%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(46, 51, 90, 0.1) 0%, rgba(28, 27, 51, 0.02) 100%)',
         'buy_button': 'linear-gradient(180deg, rgba(0, 0, 0, 0) -40.91%, #402788 132.95%)',
         'filter': 'linear-gradient(91.24deg, rgba(255, 255, 255, 0.3) 1.74%, rgba(255, 255, 255, 0.15) 101.68%)',
@@ -45,12 +46,18 @@ module.exports = {
         'review-seller': 'linear-gradient(180deg, rgba(49, 58, 91, 0.1) 0%, rgba(49, 58, 91, 0.3) 49.84%, rgba(49, 58, 91, 0) 96.11%)',
         'service': 'linear-gradient(270deg, rgba(255, 255, 255, 0.1) 57.6%, rgba(255, 255, 255, 0) 91.06%)',
 
+        'radial-white': 'radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%)',
+        'linear-white-top': 'linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)',
+        'linear-white-bottom': 'linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)',
+        'linear-white-left': 'linear-gradient(to left, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)',
+        'linear-white-right': 'linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)'
       },
       backdropBlur: {
+        '20': '20px',
         '40': '40px',
         '10': '10px',
         '29.7': '29.692445755004883px',
-        '30': '30px', 
+        '30': '30px',
         '200': '200px',
 
 
