@@ -22,7 +22,7 @@ const  CardItem = memo(({item} : props) => {
       <div className="relative w-1/2">
         <img className="" src={item.path} alt="iamge" />
         <img src={GameCard1} className="absolute w-[87%] top-[136px]" alt="gamecard1" />
-        <img src={GameCard2} className="absolute top-[118px] left-[-8px]" alt="image" />
+        <img src={GameCard2} className="absolute w-[100%] top-[118px] left-[-8px]" alt="image" />
         <span className="absolute z-2 top-[162px] left-[60px] text-white text-[24px] font-bold">{item.title}</span>
         <span className="absolute z-2 leading-[16px] top-[200px] left-[7px] w-[192px] text-white text-[13px] text-center">{item.description}</span>
       </div>

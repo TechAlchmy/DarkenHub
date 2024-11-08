@@ -5,9 +5,9 @@ import ArrowRight from "../../../assets/Picdash/games/dota2/Item Market/Arrow Ri
 import StrengthIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail.png";
 import AgileIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail (1).png";
 import IntelIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail (2).png";
-
 import lazyLoading from "../../../assets/lazy_loading.gif";
 
+import "../../../components/Dota2/HeroBox/style.css";
 import HeroCategory from "./HeroCategory";
 interface props {
   onClose: () => void
@@ -82,7 +82,7 @@ const HeroBox = ({onClose} : props) => {
       </div>)}
       { loading && (
         <div className="w-full h-[640px] flex justify-center items-center">
-          <img className="w-[60px] h-[60px]" src={lazyLoading} alt="" />
+          <span className="loader"></span>
         </div>
       )}
     </div>

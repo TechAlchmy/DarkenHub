@@ -9,7 +9,7 @@ interface Props {
 const HeroItem = ({ hero }: Props) => {
 
   return (
-    <div className="relative border-[3px] h-[90px] border-[#0000004D] rounded-lg">
+    <div className="relative border-[3px] h-[90px] border-[#0000004D] rounded-lg imgCss">
       { !hero.img1 && <LazyLoadImage src={hero.img2} className="w-full h-full object-cover"
                        alt={hero.name} placeholderSrc={PlaceholderImage} effect="blur"
       />}

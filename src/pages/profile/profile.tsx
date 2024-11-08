@@ -1,11 +1,14 @@
 
 import { useMemo } from 'react'
+import { motion } from 'framer-motion'
+
 import { UserProfile } from "../../components/Dota2/UserProfile";
 import Apex from "../../assets/profileOld/Apex-Legends-Emblem 1.png";
 import Dota2 from "../../assets/profileOld/dota-2-logo-A8CAC9B4C9-seeklogo 1.png";
 import OverWatch from "../../assets/profile/overwatch-2.png";
 import LoL from "../../assets/profile/LoL_icon 1.png";
 import Valarant from "../../assets/profileOld/valorant-logo-3D72D9117F-seeklogo 1.png";
+
 import { GameServiceItem } from "./ServiceCom";
 import { Dot3 } from '../../components/Dota2/SVG/Dot3';
 import { Star } from '../../components/Dota2/SVG/Star';
@@ -77,7 +80,7 @@ const Profile = () => {
 		]
 	}, []);
 	return (
-		<div className='w-full flex flex-col gap-10 px-10'>
+		<motion.div className='w-full flex flex-col gap-10 px-10'>
 			<div className="rounded-3xl overflow-hidden bg-[#1D2333] pb-10 relative z-20">
 				<img
 					src={"../../src/assets/profile/profileBg.jpg"}
@@ -181,7 +184,7 @@ const Profile = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

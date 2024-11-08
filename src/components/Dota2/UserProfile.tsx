@@ -41,8 +41,8 @@ export const UserProfile = () => {
           <div className="absolute left-[24px] top-[23px]">
             <div className="relative w-[188px]">
               <svg className="size-full -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-transparent bg-transparent" stroke-width="1"></circle>
-                <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-green-500" stroke-width="1" stroke-dasharray="100" stroke-dashoffset={100 - 100} stroke-linecap="round"></circle>
+                <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-transparent bg-transparent" strokeWidth="1"></circle>
+                <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-green-500" strokeWidth="1" strokeDasharray="100" strokeDashoffset={100 - 100} strokeLinecap="round"></circle>
               </svg>
 
               <div className="absolute top-[25px] right-[10px]">

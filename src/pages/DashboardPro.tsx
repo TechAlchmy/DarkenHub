@@ -1,18 +1,16 @@
+
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 import Heros from "../assets/dashboard/Component 2.png";
-import GameSlider from "../components/Dashboard/GameSlider";
-import Hexagons from "../components/Dashboard/hexagongs";
-import NewPannel from "../components/Dashboard/NewPannel";
-import DarkenHubIcon from "../assets/Picdash/DarkhubIcon.png"
+import DarkenHubIcon from "../assets/Picdash/DarkhubIcon.png";
 import BlueEffect from "../assets/dashboard/gradient.png"
 import BlueEffect1 from "../assets/dashboard/blueGradiant1.png"
 import LineEffect from "../assets/dashboard/lingEffect.png"
 import LineEffect1 from "../assets/dashboard/Lines.png"
-
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import GreenRightEffect from "../assets/Picdash/green_side_effect.png"
 import DivideLine from "../assets/Picdash/games/divide.png"
-
 import Dota2 from "../assets/Picdash/games/dota2.png"
 import Warcraft from "../assets/Picdash/games/warcraft.png"
 import LeagueofLegend from "../assets/Picdash/games/leagueoflegend.png"
@@ -20,12 +18,17 @@ import Telegram from "../assets/Picdash/games/telegram.png"
 import TankWar from "../assets/Picdash/games/tankwar.png"
 import ThunderWar from "../assets/Picdash/games/thunderwar.png"
 import TryBaseBackground from "../assets/tryBaseHub/background.png"
-import TopPriceImage from "../assets/toprice/top_price.png"
+// import TopPriceImage from "../assets/toprice/top_price.png"
 import yellowEffect from "../assets/dashboard/yellow_effect.png"
 
+import GameSlider from "../components/Dashboard/GameSlider";
+import Hexagons from "../components/Dashboard/hexagongs";
+import NewPannel from "../components/Dashboard/NewPannel";
 import GameCard from "../components/common/GameCard";
-import TopPrice from "../components/TopPrice";
+// import TopPrice from "../components/TopPrice";
 import GlobalChat from "../components/layouts/GlobalChatPro";
+
+
 const DashboardPro = () => {
 
   const navigate = useNavigate();
@@ -75,75 +78,75 @@ const DashboardPro = () => {
     },
   ]
 
-  const TopPrices = [
-    {
-      name: "item name",
-      direction: 1,
-      rate: 2.52,
-      price: 324.82
-    },
-    {
-      name: "item name",
-      direction: 1,
-      rate: 2.52,
-      price: 324.82
-    },
-    {
-      name: "item name",
-      direction: 1,
-      rate: 2.52,
-      price: 324.82
-    },
-    {
-      name: "item name",
-      direction: 0,
-      rate: 1.23,
-      price: 87.32
-    },
-    {
-      name: "item name",
-      direction: 1,
-      rate: 2.52,
-      price: 324.82
-    },
-    {
-      name: "item name",
-      direction: 1,
-      rate: 2.52,
-      price: 324.82
-    },
-    {
-      name: "item name",
-      direction: 0,
-      rate: 1.23,
-      price: 87.32
-    },
-    {
-      name: "item name",
-      direction: 1,
-      rate: 2.52,
-      price: 324.82
-    },
-    {
-      name: "item name",
-      direction: 1,
-      rate: 2.52,
-      price: 324.82
-    },
-    {
-      name: "item name",
-      direction: 0,
-      rate: 1.23,
-      price: 87.32
-    },
-  ]
+  // const TopPrices = [
+  //   {
+  //     name: "item name",
+  //     direction: 1,
+  //     rate: 2.52,
+  //     price: 324.82
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 1,
+  //     rate: 2.52,
+  //     price: 324.82
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 1,
+  //     rate: 2.52,
+  //     price: 324.82
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 0,
+  //     rate: 1.23,
+  //     price: 87.32
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 1,
+  //     rate: 2.52,
+  //     price: 324.82
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 1,
+  //     rate: 2.52,
+  //     price: 324.82
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 0,
+  //     rate: 1.23,
+  //     price: 87.32
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 1,
+  //     rate: 2.52,
+  //     price: 324.82
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 1,
+  //     rate: 2.52,
+  //     price: 324.82
+  //   },
+  //   {
+  //     name: "item name",
+  //     direction: 0,
+  //     rate: 1.23,
+  //     price: 87.32
+  //   },
+  // ]
   return (
-    <div className="w-full relative ">
+    <motion.div className="w-full relative ">
       <div className="bg w-full overflow-hiddenabsolute">
         <img src={BlueEffect} className=" absolute w-[803px] h-[913px] -left-40 -top-32" alt="" />
         <img src={BlueEffect1} className="absolute w-[800px] h-[913px] z-10 -left-40 -top-32" alt="" />
         <img src={LineEffect} className="absolute w-[1920px] -top-24 -left-80 t-0" alt="" />
-        <img src={LineEffect1} className="absolute top-[1000px] z-20 w-[29200px] -left-[300px]" alt="" />
+        <img src={LineEffect1} className="absolute top-[1000px] -z-20 w-[29200px] -left-[300px]" alt="" />
         <div className="absolute right-[0rem] top-[-2rem] w-[700px] h-[600px] ">
           <img src={Heros} alt="" />
         </div>
@@ -243,7 +246,7 @@ const DashboardPro = () => {
           </div>
         </div>
       <GlobalChat roomId="dashboard" />
-    </div>
+    </motion.div>
   );
 }
 

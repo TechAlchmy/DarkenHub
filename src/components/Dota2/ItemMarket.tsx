@@ -1,7 +1,8 @@
-import { memo, useMemo } from "react";
+import { memo, useMemo, useEffect, useState } from "react";
+import axios from "axios";
+
 import place1 from "../../../src/assets/Picdash/games/dota2/place1.png";
 import place2 from "../../../src/assets/Picdash/games/dota2/place2.png";
-import { tPlace, tSeller } from "../../types";
 import PlaceBidItem from "./placeBidItem";
 import TopSellerItem from "./topSellerItem";
 import Seller1 from '../../assets/Picdash/games/dota2/seller1.png';
@@ -9,12 +10,42 @@ import Seller2 from '../../assets/Picdash/games/dota2/1.png';
 import Seller3 from '../../assets/Picdash/games/dota2/1.png';
 import bg1 from '../../assets/Picdash/games/dota2/Blue6.png';
 
+import { tPlace, tSeller } from "../../types";
 import FilterPannel from "./filterPannel";
 import Banner from "./banner";
 import HotBids from "./hotBid/hotBid";
 import Items from "./Items";
 
+interface filterLists {
+  rarity: string[];
+  quality: string[];
+  type: string[];
+  hero: string[];
+}
+
+
 const ItemMarket = memo(() => {
+  
+  const [itemFilterLists, setItemFilterLists] = useState<filterLists>({
+    rarity: [],
+    quality: [],
+    type: [],
+    hero: []
+  });
+
+  useEffect(() => {
+      const itemFilterList = async () => {
+        try {
+          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/itemFilterList`);
+          const filterList = response.data;
+          setItemFilterLists(filterList);
+        } catch(error) {
+          console.error(error);
+        }
+      }
+      itemFilterList();
+  }, []);
+
   
   const highLights: tPlace[] = useMemo(() => {
     return [

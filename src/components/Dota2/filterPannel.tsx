@@ -1,8 +1,9 @@
 import { memo, useMemo, useState } from "react";
+
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+// import useMediaQuery from '@mui/material/useMediaQuery';
+// import { useTheme } from '@mui/material/styles'; 
 
 import FilterBg1 from '../../assets/Picdash/games/dota2/filter_bg.png';
 import FilterBg2 from '../../assets/Picdash/games/dota2/fliterBg2.png';
@@ -14,8 +15,8 @@ import HeroBox from "./HeroBox";
 const FilterPannel = memo(() => {
 
   const [isMoreHero, setIsMoreHero] = useState(false);
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('xl'));
+  // const theme = useTheme();
+  // const fullScreen = useMediaQuery(theme.breakpoints.down('xl'));
   const handleClickOpen = () => {
     setIsMoreHero(true);
   };

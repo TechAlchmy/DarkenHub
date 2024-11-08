@@ -1,5 +1,6 @@
 
 import {privacyData} from './data';
+import './privacyContent.css'
 const PrivacyContent = () => {
 
   return (

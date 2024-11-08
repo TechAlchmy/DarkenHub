@@ -11,8 +11,8 @@ export const Dot3 = () => {
         <path d="M38.5 9.5C38.5 12.5376 36.0376 15 33 15C29.9624 15 27.5 12.5376 27.5 9.5C27.5 6.46243 29.9624 4 33 4C36.0376 4 38.5 6.46243 38.5 9.5ZM30.888 9.5C30.888 10.6664 31.8336 11.612 33 11.612C34.1664 11.612 35.112 10.6664 35.112 9.5C35.112 8.33356 34.1664 7.38797 33 7.38797C31.8336 7.38797 30.888 8.33356 30.888 9.5Z" fill="#909090" />
       </g>
       <defs>
-        <filter id="filter0_d_2001_3666" x="-4.76837e-07" y="0.5" width="22.6667" height="22.6667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <filter id="filter0_d_2001_3666" x="-4.76837e-07" y="0.5" width="22.6667" height="22.6667" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
           <feOffset dx="2.33333" dy="2.33333" />
           <feGaussianBlur stdDeviation="2.91667" />
@@ -21,8 +21,8 @@ export const Dot3 = () => {
           <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2001_3666" />
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2001_3666" result="shape" />
         </filter>
-        <filter id="filter1_d_2001_3666" x="12" y="0.5" width="22.6667" height="22.6667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <filter id="filter1_d_2001_3666" x="12" y="0.5" width="22.6667" height="22.6667" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
           <feOffset dx="2.33333" dy="2.33333" />
           <feGaussianBlur stdDeviation="2.91667" />
@@ -31,8 +31,8 @@ export const Dot3 = () => {
           <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2001_3666" />
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2001_3666" result="shape" />
         </filter>
-        <filter id="filter2_d_2001_3666" x="24" y="0.5" width="22.6667" height="22.6667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <filter id="filter2_d_2001_3666" x="24" y="0.5" width="22.6667" height="22.6667" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
           <feOffset dx="2.33333" dy="2.33333" />
           <feGaussianBlur stdDeviation="2.91667" />

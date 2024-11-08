@@ -10,7 +10,7 @@ import GameServer from "../common/GameServer";
 
 const AccountMarket = memo(() => {
 
-  const [activeBtn, setActiveBtn] = useState(0);
+  const [activeBtn] = useState(0);
   const gameServers = useMemo(() => {
     return [
       {
@@ -102,26 +102,26 @@ const AccountMarket = memo(() => {
       </div>
       <div className="flex flex-row gap-8 justify-end mt-4 px-4">
         <div
-          className={`w-[110px] rounded-full px-4 py-1 cursor-pointer text-white text-[14px] text-center border-[1px] ${activeBtn == 0 ? 'bg-gradient-to-r from-indigo-500' : ''}`}
+          className={`w-[110px] flex justify-center items-center rounded-full px-4 py-1 cursor-pointer text-white text-[14px] text-center border-[1px] ${activeBtn == 0 ? 'bg-gradient-to-r from-indigo-500' : ''}`}
         >
           All
         </div>
         <div
-          className={`w-[110px] rounded-full px-4 py-1 cursor-pointer text-white text-[14px] text-center border-[1px] ${activeBtn == 1 ? 'bg-gradient-to-r from-indigo-500' : ''}`}
+          className={`w-[110px] flex justify-center items-center rounded-full px-4 py-1 cursor-pointer text-white text-[14px] text-center border-[1px] ${activeBtn == 1 ? 'bg-gradient-to-r from-indigo-500' : ''}`}
         >
           Sale
         </div>
         <div
-          className={`w-[110px] rounded-full px-4 py-1 cursor-pointer text-white text-[14px] text-center border-[1px] ${activeBtn == 2 ? 'bg-gradient-to-r from-indigo-500' : ''}`}
+          className={`w-[110px] flex justify-center items-center rounded-full px-4 py-1 cursor-pointer text-white text-[14px] text-center border-[1px] ${activeBtn == 2 ? 'bg-gradient-to-r from-indigo-500' : ''}`}
         >
           Rent
         </div>
-        <div className="relative">
-          <div className="absolute rounded-full bg-transparent top-[5px] left-[8px]">
+        <div className="relative flex justify-center items-center rounded-[50px] pl-[70px] border-[1px] overflow-hidden">
+          <div className="absolute rounded-full bg-transparent top-[14px] left-[35px]">
             <img src={SearchIcon} alt="" />
           </div>
           <input 
-            className="rounded-full bg-transparent min-h-[32px] w-[200px] text-white text-[12px] italic pl-[40px] border-[1px] border-white"
+            className="rounded-full bg-transparent h-full w-[200px] !m-0 text-white text-[12px] italic pl-[40px] !border-none !focus:shadow-none"
             placeholder="Search By Description"
           ></input>
         </div>

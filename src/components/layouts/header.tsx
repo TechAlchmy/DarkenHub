@@ -18,7 +18,7 @@ const DashBoardHearder = () => {
       <div className="text-white text-[14px]">Pages/Dashboard</div>
       <div className="flex flex-row justify-around items-center gap-6">
         <div className="relative">
-          <div className="absolute rounded-full bg-[#212325] top-[12px] left-[8px]">
+          <div className="absolute rounded-full bg-[#212325] top-[12px] left-[-35px]">
             <img src={SearchIcon} alt="" />
           </div>
           <input 

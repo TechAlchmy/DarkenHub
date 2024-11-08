@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 interface GameInfo {
   short?: string,
@@ -7,10 +8,10 @@ interface GameInfo {
   path?: any,
 }
 
-const GameCard = ({ short, name, description, path, ...rest}: GameInfo) => {
+const GameCard = ({ short, name, description, path }: GameInfo) => {
   
   const navigate = useNavigate();
-  const onGameDetail = (e: any) => {
+  const onGameDetail = () => {
     navigate(`/user/${short}`);
   }
 
@@ -21,11 +22,13 @@ const GameCard = ({ short, name, description, path, ...rest}: GameInfo) => {
       onClick={onGameDetail}
     >
       <div className="relative">
-        <img src={path} className="" />
-        <div className="flex flex-col gap-2 absolute top-[290px] left-[40px] w-[300px] text-center">
-          <span className="text-white text-[30px] font-bold">{name}</span>
-          <span className="text-white text-[16px]">{description}</span>
-        </div>
+        <Link to='/dota2'>
+          <img src={path} className="" />
+          <div className="flex flex-col gap-2 absolute top-[290px] left-[40px] w-[300px] text-center">
+            <span className="text-white text-[30px] font-bold">{name}</span>
+            <span className="text-white text-[16px]">{description}</span>
+          </div>
+        </Link>
       </div>
     </div>
     </>

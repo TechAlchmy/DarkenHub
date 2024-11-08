@@ -1,9 +1,12 @@
+import { memo, useMemo, useState } from "react"
+import { motion } from "framer-motion";
+
 import Dota2Background from "../../assets/Picdash/games/dota2/dota2.png"
 import DivideLine from "../../assets/Picdash/games/dota2/divide.png"
 import Arcana from "../../assets/Picdash/games/dota2/arcana.png"
 import Effect from "../../assets/Picdash/games/dota2/App & Mask.png"
-import { memo, useMemo, useState } from "react"
 import Rec from "../../assets/Picdash/games/dota2/non_acvtive.png";
+
 import AccountMarket from "../../components/Dota2/AccountMarket"
 import ItemMarket from "../../components/Dota2/ItemMarket"
 import GlobalChat from "../../components/layouts/GlobalChatPro"
@@ -22,7 +25,7 @@ const Dota2 = memo(() => {
     }
   }, [activeBtn]);
   return (
-    <div className="bg-black overflow-hidden">
+    <motion.div className="bg-black overflow-hidden">
       <div className="relative ">
         <div className="bg">
           <img src={Dota2Background} className="absolute left-0 -top-20 w-full h-[500px] -z-0" alt="bg" />
@@ -118,7 +121,7 @@ const Dota2 = memo(() => {
       </div>
       {renderGame}
       <GlobalChat roomId="dota2" />
-    </div>
+    </motion.div>
   )
 })
 

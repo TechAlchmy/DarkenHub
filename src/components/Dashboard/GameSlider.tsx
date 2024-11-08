@@ -45,7 +45,7 @@ const GameSlider = () => {
   useEffect(() => {
     // Initialize the carousel elements
     const elems = document.querySelectorAll('.carousel');
-    const instances = M.Carousel.init(elems, { indicators: false, duration: 0, });
+    const instances = M.Carousel.init(elems, { indicators: false, duration: 300, });
 
     // Set an interval to move to the next slide
     const interval = setInterval(() => {
@@ -62,7 +62,7 @@ const GameSlider = () => {
     <div className="carousel -ml-[34rem]">
       {
         games.map((item, index) => (
-          <div key={index} className="carousel-item" style={{opacity: 1}}>
+          <div key={index} className="carousel-item !opacity-100" style={{opacity: 1}}>
             <CardItem item={item} />
           </div>
         ))
@@ -70,5 +70,7 @@ const GameSlider = () => {
     </div>
   )
 }
+
+
 
 export default GameSlider;
