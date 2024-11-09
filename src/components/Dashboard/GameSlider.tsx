@@ -7,6 +7,7 @@ import M from 'materialize-css';
 import { useEffect, useMemo } from "react"
 import CardItem from "../GameCard/cardItem"
 import { GameDetail } from "../../types"
+import Slider from "../common/Slider";
 
 const GameSlider = () => {
   const games: GameDetail[] = useMemo(() => {
@@ -43,31 +44,16 @@ const GameSlider = () => {
   }, []);
 
   useEffect(() => {
-    // Initialize the carousel elements
-    const elems = document.querySelectorAll('.carousel');
-    const instances = M.Carousel.init(elems, { indicators: false, duration: 300, });
 
-    // Set an interval to move to the next slide
-    const interval = setInterval(() => {
-        instances.forEach((instance: { next: () => any; }) => instance.next());
-    }, 2000);
-
-    // Cleanup function to clear the interval and destroy carousel instances
-    return () => {
-        clearInterval(interval);
-        instances.forEach((instance: { destroy: () => any; }) => instance.destroy());
-    };
-}, []);
+  }, []);
   return (
-    <div className="carousel -ml-[34rem]">
+    <Slider>
       {
         games.map((item, index) => (
-          <div key={index} className="carousel-item !opacity-100" style={{opacity: 1}}>
-            <CardItem item={item} />
-          </div>
+          <CardItem item={item} />
         ))
       }
-    </div>
+    </Slider>
   )
 }
 

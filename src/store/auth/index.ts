@@ -9,13 +9,13 @@ const initialState = {
   password: '',
 }
 
-export const signUp = createAsyncThunk(
+export const signUp = createAsyncThunk<any, any>(
   "auth/signup",
   async (data, thunkAPI) => {
     try {
       const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/register`, data);
       return response.data;
-    } catch (error:any) {
+    } catch (error: any) {
       return thunkAPI.rejectWithValue(error.response.data);
     }
   }
@@ -30,7 +30,7 @@ export const signIn = createAsyncThunk(
         localStorage.setItem('authToken', response.data.token);
       }
       return response.data;
-    } catch (error:any) {
+    } catch (error: any) {
       return thunkAPI.rejectWithValue(error.response.data);
     }
   }

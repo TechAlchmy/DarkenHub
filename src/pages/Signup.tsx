@@ -8,8 +8,8 @@ import OAuthButtons from "../components/common/OAuthButtons";
 import { signUp } from "../store/auth";
 
 function Signup() {
-  
-  const dispatch = useDispatch();
+
+  const dispatch = useDispatch<any>();
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -31,26 +31,26 @@ function Signup() {
             or
           </h4>
         </div>
-        <Input 
-          label="Name" 
-          id="name" 
-          placeholder="Your full name" 
+        <Input
+          label="Name"
+          id="name"
+          placeholder="Your full name"
           value={name}
-          onChange={(e:any) => setName(e.target.value)}
+          onChange={(e: any) => setName(e.target.value)}
         />
-        <Input 
-          label="Email" 
-          id="email" 
-          placeholder="Your email address" 
+        <Input
+          label="Email"
+          id="email"
+          placeholder="Your email address"
           value={email}
-          onChange={(e:any) => setEmail(e.target.value)}
+          onChange={(e: any) => setEmail(e.target.value)}
         />
-        <Input 
-          label="Password" 
-          id="password" 
-          placeholder="your password" 
+        <Input
+          label="Password"
+          id="password"
+          placeholder="your password"
           value={password}
-          onChange={(e:any) => setPassword(e.target.value)}
+          onChange={(e: any) => setPassword(e.target.value)}
         />
         <button className="text-white font-bold mt-10 font-jakarta text-xs w-full rounded-xl bg-[#0075FF] flex items-center justify-center h-[45px]"
           onClick={onSignUp}

@@ -5,7 +5,6 @@ import ArrowRight from "../../../assets/Picdash/games/dota2/Item Market/Arrow Ri
 import StrengthIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail.png";
 import AgileIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail (1).png";
 import IntelIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail (2).png";
-import lazyLoading from "../../../assets/lazy_loading.gif";
 
 import "../../../components/Dota2/HeroBox/style.css";
 import HeroCategory from "./HeroCategory";
@@ -31,7 +30,7 @@ interface Category {
 
 
 
-const HeroBox = ({onClose} : props) => {
+const HeroBox = ({ onClose }: props) => {
   const [rawHeroData, setRawHeroData] = useState<Hero[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -66,21 +65,21 @@ const HeroBox = ({onClose} : props) => {
 
     return res;
   }, [rawHeroData]);
-  
+
   return (
     <div className="w-full custom-border bg-[#1E1E1E] bg-hero_box border-[5px] rounded-md pb-20 ">
       <div className="flex cursor-pointer w-fit items-center gap-[14px] px-6 py-2 border border-[#FFFFFF99] rounded mx-auto mt-3 text-[#FFFFFF99]" onClick={onClose}>
         <p>
-          Close 
+          Close
         </p>
         <img src={ArrowRight} alt="" />
       </div>
-      { !loading && (<div className="mt-3 grid grid-cols-3 gap-10">
+      {!loading && (<div className="mt-3 grid grid-cols-3 gap-10">
         {heroData.map(item => (
           <HeroCategory key={item.title} title={item.title} cateImg={item.cateImg} heros={item.heros} />
         ))}
       </div>)}
-      { loading && (
+      {loading && (
         <div className="w-full h-[640px] flex justify-center items-center">
           <span className="loader"></span>
         </div>

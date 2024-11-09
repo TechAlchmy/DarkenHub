@@ -7,10 +7,10 @@ import Apex from "../../assets/profileOld/Apex-Legends-Emblem 1.png";
 import Valo from "../../assets/profileOld/valorant-logo-3D72D9117F-seeklogo 1.png";
 import EditButton from "../../components/common/EditButton";
 
-interface props {
+interface Props {
   owner?: boolean
 }
-const ServiceCom = ({ owner }: props) => {
+const ServiceCom = ({ owner }: Props) => {
 
   const gameServices = useMemo(() => {
     return [

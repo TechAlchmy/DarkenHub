@@ -161,8 +161,12 @@ const DashboardPro = () => {
         </div>
         <Hexagons />
         <div className="flex -mt-60 pl-[42px] pr-[100px] justify-between">
-          <GameSlider />
-          <NewPannel />
+          <div className="w-[700px]">
+            <GameSlider />
+          </div>
+          <div className="w-[30%]">
+            <NewPannel />
+          </div>
         </div>
         <div className="flex flex-row w-[300px] mx-auto gap-1 items-center rounded-full text-white text-[13px] mt-[166px] px-3 py-2">
           <img src={DarkenHubIcon} className="w-[9px] h-[12px]" alt="" />
@@ -210,11 +214,11 @@ const DashboardPro = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 mt-4 px-8">
-        {
-          GameList.map((item, index) => {
-            return <GameCard key={index} short={item.short} name={item.name} description={item.description} path={item.path} /> 
-          })
-        }
+          {
+            GameList.map((item, index) => {
+              return <GameCard key={index} short={item.short} name={item.name} description={item.description} path={item.path} />
+            })
+          }
         </div>
       </div>
 
@@ -232,19 +236,19 @@ const DashboardPro = () => {
       </div> */}
 
       <div className="bg-[#040404] pt-4">
-          <div className="relative">
-            <img src={TryBaseBackground} className="w-full" />
-            <div className="absolute w-full px-24 flex flex-row items-center justify-between top-[56px]">
-              <div className="flex flex-col gap-3">
-                <span className="text-white text-[24px] font-extrabold">Try BaseHub Today</span>
-                <span className="text-white text-[14px]">Start for free, then gorw with your team</span>
-              </div>
-              <div className="cursor-pointer bg-[#FF6C00] rounded-full text-black text-[16px] font-semibold px-8 py-2">
-                Get Started
-              </div>
+        <div className="relative">
+          <img src={TryBaseBackground} className="w-full" />
+          <div className="absolute w-full px-24 flex flex-row items-center justify-between top-[56px]">
+            <div className="flex flex-col gap-3">
+              <span className="text-white text-[24px] font-extrabold">Try BaseHub Today</span>
+              <span className="text-white text-[14px]">Start for free, then gorw with your team</span>
+            </div>
+            <div className="cursor-pointer bg-[#FF6C00] rounded-full text-black text-[16px] font-semibold px-8 py-2">
+              Get Started
             </div>
           </div>
         </div>
+      </div>
       <GlobalChat roomId="dashboard" />
     </motion.div>
   );

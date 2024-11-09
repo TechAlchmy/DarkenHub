@@ -8,7 +8,7 @@ import { signIn } from "../store/auth";
 
 function Signin() {
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>("");
@@ -21,7 +21,7 @@ function Signin() {
   }, [])
 
   const onSignIn = () => {
-    let data: any = {email, password};
+    let data: any = { email, password };
     dispatch(signIn(data));
     if (authenticated)
       navigate("/user/dashboard");
@@ -39,15 +39,15 @@ function Signin() {
         </h4>
       </div>
       <Input
-        label="Email" 
-        id="email" 
-        placeholder="Your email address" 
+        label="Email"
+        id="email"
+        placeholder="Your email address"
         value={email}
         onChange={(e: any) => setEmail(e.target.value)}
       />
-      <Input 
-        label="Password" 
-        id="password" 
+      <Input
+        label="Password"
+        id="password"
         placeholder="your password"
         value={password}
         onChange={(e: any) => setPassword(e.target.value)}
@@ -56,7 +56,7 @@ function Signin() {
         <Switch defaultChecked={true} />
         <span>Remember me</span>
       </div>
-      <button 
+      <button
         className="text-white font-bold mt-10 font-jakarta text-xs w-full rounded-xl bg-[#0075FF] flex items-center justify-center h-[45px]"
         onClick={onSignIn}
       >
