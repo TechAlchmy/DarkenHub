@@ -1,0 +1,30 @@
+.shadowField {
+  box-shadow: 0 0 40px 0 rgba(0,0,0,.06);
+}
+
+.minChat:nth-child(1) {
+  width: 100%;
+  top: 0;
+}
+.minChat:nth-child(2) {
+  width: 14px;
+  top: 6px;
+}
+.minChat:nth-child(3) {
+  width: 10px;
+  top: 12px;
+}
+
+.expandChat:nth-child(1) {
+  width: 10px;
+  top: 0;
+}
+.expandChat:nth-child(2) {
+  width: 14px;
+  top: 6px;
+}
+.expandChat:nth-child(3) {
+  width: 100%;
+  top: 12px;
+}
+

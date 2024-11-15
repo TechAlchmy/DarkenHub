@@ -1,4 +1,5 @@
 import { memo, useMemo, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom"
 
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -13,7 +14,8 @@ import General from '../../assets/Picdash/games/dota2/active.png';
 import HeroBox from "./HeroBox";
 
 const FilterPannel = memo(() => {
-
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isMoreHero, setIsMoreHero] = useState(false);
   // const theme = useTheme();
   // const fullScreen = useMediaQuery(theme.breakpoints.down('xl'));
@@ -24,6 +26,12 @@ const FilterPannel = memo(() => {
   const handleClose = () => {
     setIsMoreHero(false);
   };
+
+  const onClickHandler = () => {
+    const currentPath = location.pathname;
+     const newPath = currentPath.replace('/user/dota2', '/user/postItem',);
+     navigate(newPath);
+  }
 
   const filters = useMemo(() => {
     return [
@@ -75,6 +83,13 @@ const FilterPannel = memo(() => {
               </div>
             </div>
           ))}
+          <div className="flex justify-end">
+            <button
+              className="relative z-50 opacity-100 bg-custom-multiple py-2 px-10 text-black font-bold rounded-md mt-2"
+              onClick={onClickHandler}>
+                Post My Items
+            </button>
+          </div>
         </div>
       </div>
       <Dialog

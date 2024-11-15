@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { Outlet} from "react-router-dom";
 import { motion } from "framer-motion";
 
 import DashBoardHearder from "../components/layouts/header"
 import SideBar from "../components/layouts/siderBar"
+import ChatField from "../components/layouts/ChatField"
 // import GlobalChat from "../components/layouts/GlobalChatPro"
 import Footer from "../components/Footer"
 import LayoutBg from "../assets/userlayout/Group 1261152754.png";
 const UserLayout = () => { 
+  const [headerState, setHeaderState] = useState<boolean>(true);
+  const [chatState, setChatState] = useState<boolean>(true);
   
   // const gradientBorderStyle = {
   //   backgroundImage: `url(${LayoutBg})`,
@@ -22,11 +26,16 @@ const UserLayout = () => {
   // }
   return (
     <motion.div className="flex relative">
-      <SideBar />
-      <div className="w-[calc(100%-250px)] min-h-screen bg-[#0D0D0D]">
-        <DashBoardHearder />
-        <Outlet />
-        <div className="px-24 relative z-[2]">
+      <SideBar toggle={headerState} />
+      <div className={`w-full min-h-screen ease-in-out duration-500 overflow-hidden bg-[#0D0D0D] ${headerState ? "ml-[250px]" : "ml-[120px]"}`}>
+        <div className={`ease-in-out duration-500 ${chatState ? "mr-[80px]" : "mr-[300px]"}`}>
+          <DashBoardHearder setState={setHeaderState} currentState={headerState} />
+          <div className="mt-[79.5px]">
+            <Outlet />
+          </div>
+        </div>
+        <ChatField setState={setChatState} currentState={chatState}/>
+        <div className={`px-24 relative ease-in-out duration-500 z-[2] ${chatState ? "mr-[80px]" : "mr-[300px]"}`}>
           <Footer />
         </div>
       </div>

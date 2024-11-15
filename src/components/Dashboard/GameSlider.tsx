@@ -1,7 +1,7 @@
 import Subtract from "../../assets/Picdash/game_card/Subtract.png"
 import "swiper/css"
 import "swiper/css/effect-cards"
-import 'materialize-css/dist/css/materialize.min.css';
+// import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
 
 import { useEffect, useMemo } from "react"
@@ -50,7 +50,7 @@ const GameSlider = () => {
     <Slider>
       {
         games.map((item, index) => (
-          <CardItem item={item} />
+          <CardItem key={index} item={item} />
         ))
       }
     </Slider>

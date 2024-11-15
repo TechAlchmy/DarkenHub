@@ -21,7 +21,7 @@ const OAuthButtons = () => {
 
         const data = await backendResponse.json();
         if (data.success) {
-          localStorage.setItem('authToken', data.token);
+          localStorage.setItem('authToken', data.user.token);
           navigate("/user/dashboard");
         } else {
           console.error('Authentication failed');

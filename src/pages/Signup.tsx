@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,14 +10,25 @@ import { signUp } from "../store/auth";
 function Signup() {
 
   const dispatch = useDispatch<any>();
+  const isFirst = useRef(false);
+  console.log(isFirst.current, "bbbbbbb");
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
   const onSignUp = () => {
-    let data = { fullname: name, email: email, password: password };
-    dispatch(signUp(data));
+    let data = { 
+      fullname: name,
+      userID: name + Math.floor(Math.random() * 9000000000) + 1000000000,
+      email: email,
+      password: password
+    };
+    if(!isFirst.current) {
+      console.log(isFirst.current, "aaaaaa");
+      isFirst.current = true;
+      dispatch(signUp(data));
+    }
   }
   return (
     <>

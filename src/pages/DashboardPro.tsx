@@ -143,9 +143,9 @@ const DashboardPro = () => {
   return (
     <motion.div className="w-full relative ">
       <div className="bg w-full overflow-hiddenabsolute">
-        <img src={BlueEffect} className=" absolute w-[803px] h-[913px] -left-40 -top-32" alt="" />
-        <img src={BlueEffect1} className="absolute w-[800px] h-[913px] z-10 -left-40 -top-32" alt="" />
-        <img src={LineEffect} className="absolute w-[1920px] -top-24 -left-80 t-0" alt="" />
+        <img src={BlueEffect} className=" absolute w-[803px] h-[913px] -left-40 -top-32 -z-10" alt="" />
+        <img src={BlueEffect1} className="absolute w-[800px] h-[913px] -left-40 -top-32 -z-[5]" alt="" />
+        <img src={LineEffect} className="absolute w-[1920px] -top-24 -left-80 t-0 -z-[15]" alt="" />
         <img src={LineEffect1} className="absolute top-[1000px] -z-20 w-[29200px] -left-[300px]" alt="" />
         <div className="absolute right-[0rem] top-[-2rem] w-[700px] h-[600px] ">
           <img src={Heros} alt="" />

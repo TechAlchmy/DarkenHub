@@ -1,5 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import Dashlogo from "../../assets/dashboard/Vector.png"
+
 import './steamCallBack.css';
 
 const SteamCallback = () => {
@@ -29,6 +32,8 @@ const SteamCallback = () => {
             .then(data => {
                 if (data.success === true) {
                     localStorage.setItem('authToken', data.token);
+                    localStorage.setItem('userID', data.user.userID);
+                    localStorage.setItem('userName', data.user.fullname);
                     navigate('/user/dashboard');
                 } else {
                     navigate('/signin');
@@ -42,8 +47,24 @@ const SteamCallback = () => {
     }, []); // Add hasFetched as a dependency
 
     return (
-        <div className={`w-full h-screen flex justify-center items-center bg-loading bg-cover`}>
-            <p className="loader"></p>
+        <div className={`w-full h-screen flex justify-center items-center bg-loading bg-cover flex-col`}>
+            <p className='title'>
+                <img src={Dashlogo} alt="" />
+                <span>arkenHub</span>
+            </p>
+            <p className='loading'>Loading...</p>
+            <div className='mt-5'>
+                <div className="loaderBars">
+                    <div className="loaderBar"></div>
+                    <div className="loaderBar"></div>
+                    <div className="loaderBar"></div>
+                    <div className="loaderBar"></div>
+                    <div className="loaderBar"></div>
+                    <div className="loaderBar"></div>
+                    <div className="loaderBar"></div>
+                    <div className="loaderBar"></div>
+                </div>
+          </div>
         </div>
     );
 };

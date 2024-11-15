@@ -28,6 +28,8 @@ export const signIn = createAsyncThunk(
       const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/login`, data);
       if (response.data.success === true) {
         localStorage.setItem('authToken', response.data.token);
+        localStorage.setItem('userID', response.data.user.userID);
+        localStorage.setItem('userName', response.data.user.fullname);
       }
       return response.data;
     } catch (error: any) {

@@ -10,7 +10,7 @@ import Seller2 from '../../assets/Picdash/games/dota2/1.png';
 import Seller3 from '../../assets/Picdash/games/dota2/1.png';
 import bg1 from '../../assets/Picdash/games/dota2/Blue6.png';
 
-import { tPlace, tSeller } from "../../types";
+import { tPlace, tSeller, raceItemLists } from "../../types";
 import FilterPannel from "./filterPannel";
 import Banner from "./banner";
 import HotBids from "./hotBid/hotBid";
@@ -23,15 +23,15 @@ interface filterLists {
   hero: string[];
 }
 
-
 const ItemMarket = memo(() => {
-  
   const [itemFilterLists, setItemFilterLists] = useState<filterLists>({
     rarity: [],
     quality: [],
     type: [],
     hero: []
   });
+
+  const [raceItemLists, setRaceItemLists] = useState<raceItemLists[]>([]);
 
   useEffect(() => {
       const itemFilterList = async () => {
@@ -44,6 +44,16 @@ const ItemMarket = memo(() => {
         }
       }
       itemFilterList();
+      const raceItemList = async () => {
+        try {
+          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/getRaceItem`);
+          const filterList = response.data.data;
+          setRaceItemLists(filterList);
+        } catch(error) {
+          console.error(error);
+        }
+      }
+      raceItemList();
   }, []);
 
   
@@ -164,7 +174,8 @@ const ItemMarket = memo(() => {
         premium: true
       },
     ]
-  }, [])
+  }, []);
+
   const gradientBorderStyle = {
     border: '1px solid',
     borderImageSource: 'linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, rgba(39, 55, 207, 0) -4.69%, rgba(189, 252, 254, 0.5) 100%)',
@@ -178,8 +189,8 @@ const ItemMarket = memo(() => {
           <FilterPannel />
           <div className="pl-5 w-3/4">
               <div className="grid grid-cols-2 gap-10">
-                {highLights.map((item, index) => (
-                  <PlaceBidItem key={index} data={item} />
+                {raceItemLists.map((item, index) => (
+                  <PlaceBidItem key={index} item={item} />
                 ))}
               </div>
               <div className="mt-5">

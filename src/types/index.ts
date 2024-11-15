@@ -19,6 +19,20 @@ export type tSeller = {
   premium: boolean
 }
 
+export interface PostItem {
+  seller: string;
+  price: number;
+  status: number;
+  item: {
+    iconUrl: string;
+    itemName: string;
+    quality: string;
+    rarity: string;
+    type: string;
+    hero: string;
+  };
+}
+
 export type tBid = {
   time: string;
   heart: number;
@@ -35,8 +49,49 @@ export type tHero = {
 }
 
 export interface IMessage {
-  userId: string;
-  roomId: string;
+  userId: string | null;
+  userName: string | null;
+  chatType: string;
   message: string;
   timestamp: Date;
+}
+
+export interface SellItem {
+  id: string;
+  iconUrl: string;
+  itemName: string;
+  quality: string;
+  rarity: string;
+  type: string;
+  hero: string;
+}
+
+export interface SendData {
+  item_id: string;
+  seller: string;
+  price: string;
+  status?: number;
+  item: {
+    iconUrl: string;
+    itemName: string;
+    quality: string;
+    rarity: string;
+    type: string;
+    hero: string;
+  };
+}
+
+export interface raceItemLists {
+  seller: string;
+  startPrice: number;
+  bidPrice: number;
+  status: number;
+  item: {
+    iconUrl: string;
+    itemName: string;
+    quality: string;
+    rarity: string;
+    type: string;
+    hero: string;
+  };
 }

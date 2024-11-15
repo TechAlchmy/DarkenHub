@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Signup from "./pages/Signup";
 import AuthLayout from "./components/layouts/AuthLayout";
 import SteamCallback from "./components/Dota2/SteamCallback";
@@ -7,8 +8,13 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import UserLayout from "./pages/UserLayout";
 import Dota2 from "./pages/Games/Dota2";
 import DashboardPro from "./pages/DashboardPro";
-// import ProfileOld from "./pages/profileOld/ProfileOld";
 import Profile from "./pages/profile/profile";
+import Clan from "./pages/Clan";
+import PostItems from "./pages/PostItems";
+import BuyItem from "./pages/BuyItem";
+import TransactionTable from "./pages/TransactionTable";
+import RaceItem from "./pages/RaceItem";
+import RaceTransaction from "./pages/RaceTransaction";
 
 
 const router = createBrowserRouter([
@@ -50,13 +56,33 @@ const router = createBrowserRouter([
         path: "dota2",
         element: <Dota2 />
       },
-      // {
-      //   path: "profileOld",
-      //   element: <ProfileOld />
-      // },
       {
         path: "profile",
         element: <Profile />
+      },
+      {
+        path: "clan",
+        element: <Clan />
+      },
+      {
+        path: "postItem",
+        element: <PostItems />
+      },
+      {
+        path: "buyItem",
+        element: <BuyItem />
+      },
+      {
+        path: "transactionTable",
+        element: <TransactionTable />
+      },
+      {
+        path: "raceItem",
+        element: <RaceItem />
+      },
+      {
+        path: "raceTransaction",
+        element: <RaceTransaction />
       },
     ]
   },

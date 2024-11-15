@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 
+import Dashlogo from "../../../assets/dashboard/Vector.png";
 import ArrowRight from "../../../assets/Picdash/games/dota2/Item Market/Arrow Right.png";
 import StrengthIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail.png";
 import AgileIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail (1).png";
@@ -80,8 +81,24 @@ const HeroBox = ({ onClose }: props) => {
         ))}
       </div>)}
       {loading && (
-        <div className="w-full h-[640px] flex justify-center items-center">
-          <span className="loader"></span>
+        <div className="w-full h-[640px] flex justify-center items-center flex-col">
+          <p className='title'>
+            <img src={Dashlogo} alt="" />
+            <span>arkenHub</span>
+          </p>
+          <p className='loading'>Loading...</p>
+          <div className='mt-5'>
+              <div className="loaderBars">
+                  <div className="loaderBar"></div>
+                  <div className="loaderBar"></div>
+                  <div className="loaderBar"></div>
+                  <div className="loaderBar"></div>
+                  <div className="loaderBar"></div>
+                  <div className="loaderBar"></div>
+                  <div className="loaderBar"></div>
+                  <div className="loaderBar"></div>
+              </div>
+          </div>
         </div>
       )}
     </div>

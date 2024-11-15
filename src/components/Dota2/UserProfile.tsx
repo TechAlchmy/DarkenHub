@@ -6,17 +6,14 @@ export const UserProfile = () => {
       <div className="rounded-full w-[300px] h-[300px] p-[30px] border border-white/50">
         <div className="rounded-full p-[30px] border border-white/50 relative">
           <div className="bg-[#1D2333] rounded-full p-[20px]">
-
             <div className="relative">
               <div className="relative">
-
                 <img
                   src={"../../src/assets/profile/Avatar Image.png"}
                   alt="profileBg"
                   className="w-full h-full border-radius-30px"
                 />
               </div>
-
               <img
                 src={"../../src/assets/profile/avatarName.png"}
                 alt="profileBg"
@@ -42,7 +39,7 @@ export const UserProfile = () => {
             <div className="relative w-[188px]">
               <svg className="size-full -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-transparent bg-transparent" strokeWidth="1"></circle>
-                <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-green-500" strokeWidth="1" strokeDasharray="100" strokeDashoffset={100 - 100} strokeLinecap="round"></circle>
+                <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-green-500" strokeWidth="1" strokeDasharray="100" strokeDashoffset={100 - 26} strokeLinecap="round"></circle>
               </svg>
 
               <div className="absolute top-[25px] right-[10px]">

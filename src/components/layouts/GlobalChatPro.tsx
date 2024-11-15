@@ -22,7 +22,7 @@ const GlobalChat = ({roomId} : props) => {
   
   useEffect(() => {
     // Join the specified room
-    socket.emit('joinRoom', roomId);
+    socket.emit('chatType', roomId);
 
     // Receive chat history for the room
     socket.on('chat history', (history) => {
@@ -30,7 +30,7 @@ const GlobalChat = ({roomId} : props) => {
     });
 
     // Receive new messages
-    socket.on('chat message', (msg) => {
+    socket.on('send message', (msg) => {
       setMessages((prevMessages) => [...prevMessages, msg]);
     });
 
@@ -38,12 +38,12 @@ const GlobalChat = ({roomId} : props) => {
       socket.off('chat history');
       socket.off('chat message');
     };
-  }, [roomId]);
+  }, [roomId, messages]);
 
   const sendMessage = () => {
     if (newMessage.trim()) {
-      const msg: IMessage = { roomId, userId: 'user1', message: newMessage, timestamp: new Date() };
-      socket.emit('chat message', msg);
+      const msg: IMessage = { chatType: roomId, userName: 'username', userId: 'user1', message: newMessage, timestamp: new Date() };
+      socket.emit('send message', msg);
       setNewMessage('');
     }
   };
@@ -97,7 +97,7 @@ const GlobalChat = ({roomId} : props) => {
       <div className="relative">
         <input 
           type="text" 
-          className="custom_input p-6 pr-[122px]! text-[16px] rounded border outline-none border-none" 
+          className="custom_input bg-black p-6 pr-[122px]! text-[16px] rounded border outline-none border-none" 
           placeholder="Typing here" 
           name="" 
           value={newMessage} 
