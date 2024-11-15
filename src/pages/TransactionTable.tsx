@@ -29,7 +29,7 @@ const TransactionTable = () => {
       if (isFirst.current) {
         isFirst.current = false;
         try {
-          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/transactionDB`, { params: { userID } });
+          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/transactionDB/`, { params: { userID } });
           setTransactionList(response.data.data.reverse());
         } catch (error) {
           console.error("Failed to fetch transactions:", error);
@@ -43,7 +43,7 @@ const TransactionTable = () => {
     const item = transactionList[index];
     if (item.item_id) {
       try {
-        await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/upgradeTransactionDB`, { item_id: item.item_id, status: newStatus });
+        await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/upgradeTransactionDB/`, { item_id: item.item_id, status: newStatus });
         setTransactionList(prevList => prevList.map((trans, i) => (i === index ? { ...trans, status: newStatus } : trans)));
       } catch (error) {
         console.error("Failed to update transaction status:", error);

@@ -14,7 +14,7 @@ export const signUp = createAsyncThunk<any, any>(
   "auth/signup",
   async (data, thunkAPI) => {
     try {
-      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/register`, data);
+      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/register/`, data);
       return response.data;
     } catch (error: any) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -26,7 +26,7 @@ export const signIn = createAsyncThunk(
   "auth/signin",
   async (data: any, thunkAPI) => {
     try {
-      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/login`, data);
+      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/login/`, data);
       if (response.data.success === true) {
         localStorage.setItem('authToken', response.data.token);
         localStorage.setItem('userID', response.data.user.userID);

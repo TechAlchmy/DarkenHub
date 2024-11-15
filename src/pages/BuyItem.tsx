@@ -56,7 +56,7 @@ const BuyItem = () => {
     console.log(buyItemData);
     if(buyItemData.tradeLink === "") return;
     try {
-      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/buyItem`, buyItemData);
+      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/buyItem/`, buyItemData);
       const responseData = response.data.data;
       console.log(responseData);
       const currentPath = location.pathname;

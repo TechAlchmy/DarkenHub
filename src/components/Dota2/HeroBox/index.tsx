@@ -41,7 +41,7 @@ const HeroBox = ({ onClose }: props) => {
     const fetchHeroData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/heroes`);
+        const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/heroes/`);
         setLoading(false);
         const data = response.data.data;
         setRawHeroData(data);

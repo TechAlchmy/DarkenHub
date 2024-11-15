@@ -11,7 +11,6 @@ function Signup() {
 
   const dispatch = useDispatch<any>();
   const isFirst = useRef(false);
-  console.log(isFirst.current, "bbbbbbb");
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");

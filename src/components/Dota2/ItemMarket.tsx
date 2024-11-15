@@ -37,7 +37,7 @@ const ItemMarket = memo(() => {
   useEffect(() => {
       const itemFilterList = async () => {
         try {
-          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/itemFilterList`);
+          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/itemFilterList/`);
           const filterList = response.data;
           setItemFilterLists(filterList);
         } catch(error) {
@@ -47,7 +47,7 @@ const ItemMarket = memo(() => {
       itemFilterList();
       const raceItemList = async () => {
         try {
-          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/getRaceItem`);
+          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/getRaceItem/`);
           const filterList = response.data.data;
           setRaceItemLists(filterList);
         } catch(error) {

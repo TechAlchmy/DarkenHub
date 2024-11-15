@@ -72,7 +72,7 @@ const RaceItem = () => {
     });
 
     const fetchRaceItem = async () => {
-      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/raceTransactionList`, {item_id: data.item_id});
+      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/raceTransactionList/`, {item_id: data.item_id});
       const raceBidList = response.data.data;
       if (raceBidList && raceBidList.buyer && raceBidList.buyer.length > 0) {
         setTopPrice(raceBidList.buyer[raceBidList.buyer.length - 1].bidPrice);
@@ -84,7 +84,7 @@ const RaceItem = () => {
   const sendData = async () => {
     if(Object.keys(raceItemData).length !== 0) {
       try {
-        const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/upgradeRaceTransactionList`, raceItemData);
+        const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/upgradeRaceTransactionList/`, raceItemData);
         const raceBidList = response.data.data;
         setRaceItemList(raceBidList);
         console.log(raceBidList);
