@@ -4,8 +4,8 @@ import axios from "axios";
 import Dashlogo from "../assets/dashboard/Vector.png";
 
 import { SellItem, SendData } from "../types";
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 interface PostItems {
   id: string;
   iconUrl: string;

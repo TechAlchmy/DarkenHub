@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Dashlogo from "../../assets/dashboard/Vector.png"
 
 import './steamCallBack.css';
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 const SteamCallback = () => {
     const navigate = useNavigate();
     const isFirst = useRef(false);

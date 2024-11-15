@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 interface BuyItem {
   item_id: string;
   seller: string;

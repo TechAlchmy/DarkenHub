@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { use } from 'i18next';
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 interface RaceItem {
   item_id: string;
   seller: string;

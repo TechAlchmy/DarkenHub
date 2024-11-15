@@ -12,7 +12,8 @@ import bid6 from "../../../assets/Picdash/games/dota2/1Art.png";
 import avatar from "../../../assets/Picdash/games/dota2/Person1.png";
 
 import BidItem from "./bidItem";
-require('dotenv').config();
+import * as dotenv from 'dotenv';
+dotenv.config();
 const HotBids = () => {
   const [postItemsList, setPostItemsList] = useState<PostItem[]>([]);
   const fetchItem = async () => {

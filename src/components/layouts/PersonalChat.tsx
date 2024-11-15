@@ -7,8 +7,8 @@ import { IMessage } from "../../types";
 import avatarImg from "../../assets/profile/Avatar Image.png";
 import Hexagon from "../../assets/profile/Hexagon.png";
 import sendMessageIcon from "../../assets/sendMessageIcon.png"
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 interface Props {
   chatType: string;
   current: boolean;

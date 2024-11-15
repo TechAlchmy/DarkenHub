@@ -7,8 +7,8 @@ import smile from "../../assets/globalchat/smile_emoj.png";
 import { useEffect, useRef, useState } from "react";
 import { IMessage } from "../../types";
 // import { useSelector } from "react-redux";
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 interface props {
   roomId: string
 }

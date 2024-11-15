@@ -15,8 +15,8 @@ import FilterPannel from "./filterPannel";
 import Banner from "./banner";
 import HotBids from "./hotBid/hotBid";
 import Items from "./Items";
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 interface filterLists {
   rarity: string[];
   quality: string[];

@@ -9,7 +9,8 @@ import IntelIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail (2
 
 import "../../../components/Dota2/HeroBox/style.css";
 import HeroCategory from "./HeroCategory";
-require('dotenv').config();
+import * as dotenv from 'dotenv';
+dotenv.config();
 interface props {
   onClose: () => void
 }

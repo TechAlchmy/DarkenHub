@@ -1,8 +1,8 @@
 import { useGoogleLogin } from "@react-oauth/google";
 import { FaSteam, FaApple, FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 const OAuthButtons = () => {
 
   const navigate = useNavigate();

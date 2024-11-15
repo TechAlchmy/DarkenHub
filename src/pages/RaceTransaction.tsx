@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 interface RaceTransactionData {
   item_id: string;
   seller: string;

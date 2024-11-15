@@ -7,8 +7,8 @@ import left from "../../../assets/Picdash/games/dota2/left.png";
 
 import avatar from "../../../assets/Picdash/games/dota2/Person1.png";
 import ItemCom from "./itemCom";
-require('dotenv').config();
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 const ItemsCom = () => {
   const [postItemsList, setPostItemsList] = useState<PostItem[]>([]);
   const fetchItem = async () => {
