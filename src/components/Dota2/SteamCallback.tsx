@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Dashlogo from "../../assets/dashboard/Vector.png"
 
 import './steamCallBack.css';
-import * as dotenv from 'dotenv';
-dotenv.config();
+
+
 const SteamCallback = () => {
     const navigate = useNavigate();
     const isFirst = useRef(false);
@@ -22,7 +22,7 @@ const SteamCallback = () => {
             };
 
             // Send user data to backend
-            fetch(`${process.env.VITE_APP_LOCAL_URL}/auth/steam/login`, {
+            fetch(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/steam/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

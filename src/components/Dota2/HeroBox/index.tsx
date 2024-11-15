@@ -9,8 +9,8 @@ import IntelIcon from "../../../assets/Picdash/games/dota2/Item Market/Detail (2
 
 import "../../../components/Dota2/HeroBox/style.css";
 import HeroCategory from "./HeroCategory";
-import * as dotenv from 'dotenv';
-dotenv.config();
+
+
 interface props {
   onClose: () => void
 }
@@ -41,7 +41,7 @@ const HeroBox = ({ onClose }: props) => {
     const fetchHeroData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${process.env.VITE_APP_LOCAL_URL}/dota2/heroes`);
+        const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/heroes`);
         setLoading(false);
         const data = response.data.data;
         setRawHeroData(data);

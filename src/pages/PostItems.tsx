@@ -4,8 +4,8 @@ import axios from "axios";
 import Dashlogo from "../assets/dashboard/Vector.png";
 
 import { SellItem, SendData } from "../types";
-import * as dotenv from 'dotenv';
-dotenv.config();
+
+
 interface PostItems {
   id: string;
   iconUrl: string;
@@ -30,8 +30,8 @@ const PostItems = () => {
     const fetchPostItemData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${process.env.VITE_APP_LOCAL_URL}/dota2/postItems`);
-        // const response = await axios.get(`${process.env.VITE_APP_LOCAL_URL}/dota2/postItems`, { params: { userID } });
+        const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/postItems`);
+        // const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/postItems`, { params: { userID } });
         setLoading(false);
         const data = response.data.data;
         setPostItemsList(data);
@@ -92,13 +92,13 @@ const PostItems = () => {
       if(!isChecked){
         console.log(newMarketItemData)
         const response = await axios.post(
-          `${process.env.VITE_APP_LOCAL_URL}/dota2/marketItem`,
+          `${import.meta.env.VITE_APP_LOCAL_URL}/dota2/marketItem`,
           newMarketItemData
         );
         console.log(response.data);
       } else {
         const response = await axios.post(
-          `${process.env.VITE_APP_LOCAL_URL}/dota2/raceItem`,
+          `${import.meta.env.VITE_APP_LOCAL_URL}/dota2/raceItem`,
           newRaceItemData
         );
         console.log(response.data);

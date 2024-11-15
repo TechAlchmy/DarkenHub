@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import * as dotenv from 'dotenv';
-dotenv.config();
+
+
 interface BuyItem {
   item_id: string;
   seller: string;
@@ -56,7 +56,7 @@ const BuyItem = () => {
     console.log(buyItemData);
     if(buyItemData.tradeLink === "") return;
     try {
-      const response = await axios.post(`${process.env.VITE_APP_LOCAL_URL}/dota2/buyItem`, buyItemData);
+      const response = await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/buyItem`, buyItemData);
       const responseData = response.data.data;
       console.log(responseData);
       const currentPath = location.pathname;

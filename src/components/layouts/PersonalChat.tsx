@@ -7,8 +7,7 @@ import { IMessage } from "../../types";
 import avatarImg from "../../assets/profile/Avatar Image.png";
 import Hexagon from "../../assets/profile/Hexagon.png";
 import sendMessageIcon from "../../assets/sendMessageIcon.png"
-import * as dotenv from 'dotenv';
-dotenv.config();
+
 interface Props {
   chatType: string;
   current: boolean;
@@ -22,7 +21,7 @@ interface Props {
   };
 }
 
-const socket = io(`${process.env.VITE_APP_LOCAL_URL}`);
+const socket = io(`${import.meta.env.VITE_APP_LOCAL_URL}`);
 
 const PersonalChat = ({chatType, current, personSte, setPersonState, data}: Props) => {
   const [messages, setMessages] = useState<IMessage[]>([]);

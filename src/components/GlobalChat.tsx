@@ -7,9 +7,8 @@ import smallChatIcon from "../assets/globalchat/smallChatIcon.png"
 // import { useEffect, useRef, useState } from "react"
 import { useEffect, useState } from "react"
 import io from "socket.io-client"
-import * as dotenv from 'dotenv';
-dotenv.config();
-const socket = io(`${process.env.VITE_APP_LOCAL_URL}`);
+
+const socket = io(`${import.meta.env.VITE_APP_LOCAL_URL}`);
 
 interface ChatMessage {
   sender: string;

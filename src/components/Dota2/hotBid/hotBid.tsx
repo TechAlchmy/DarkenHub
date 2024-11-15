@@ -12,13 +12,13 @@ import bid6 from "../../../assets/Picdash/games/dota2/1Art.png";
 import avatar from "../../../assets/Picdash/games/dota2/Person1.png";
 
 import BidItem from "./bidItem";
-import * as dotenv from 'dotenv';
-dotenv.config();
+
+
 const HotBids = () => {
   const [postItemsList, setPostItemsList] = useState<PostItem[]>([]);
   const fetchItem = async () => {
     try {
-      const response = await axios.get(`${process.env.VITE_APP_LOCAL_URL}/dota2/getMarketItem`);
+      const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/getMarketItem`);
       const data = response.data.data;
       setPostItemsList(data.reverse());
     } catch (error) {

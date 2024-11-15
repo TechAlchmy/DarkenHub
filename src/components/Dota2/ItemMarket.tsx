@@ -15,8 +15,8 @@ import FilterPannel from "./filterPannel";
 import Banner from "./banner";
 import HotBids from "./hotBid/hotBid";
 import Items from "./Items";
-import * as dotenv from 'dotenv';
-dotenv.config();
+
+
 interface filterLists {
   rarity: string[];
   quality: string[];
@@ -37,7 +37,7 @@ const ItemMarket = memo(() => {
   useEffect(() => {
       const itemFilterList = async () => {
         try {
-          const response = await axios.get(`${process.env.VITE_APP_LOCAL_URL}/dota2/itemFilterList`);
+          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/itemFilterList`);
           const filterList = response.data;
           setItemFilterLists(filterList);
         } catch(error) {
@@ -47,7 +47,7 @@ const ItemMarket = memo(() => {
       itemFilterList();
       const raceItemList = async () => {
         try {
-          const response = await axios.get(`${process.env.VITE_APP_LOCAL_URL}/dota2/getRaceItem`);
+          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/getRaceItem`);
           const filterList = response.data.data;
           setRaceItemLists(filterList);
         } catch(error) {
