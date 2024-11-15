@@ -1,6 +1,7 @@
 import { useGoogleLogin } from "@react-oauth/google";
 import { FaSteam, FaApple, FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+require('dotenv').config();
 
 const OAuthButtons = () => {
 
@@ -11,7 +12,7 @@ const OAuthButtons = () => {
       try {
         
         // Send the ID token to your backend
-        const backendResponse = await fetch(`${import.meta.env.VITE_APP_LOCAL_URL}/auth/google`, {
+        const backendResponse = await fetch(`${process.env.VITE_APP_LOCAL_URL}/auth/google`, {
           method: 'POST',
           headers: { 
             'Content-Type': 'application/json',
@@ -37,8 +38,8 @@ const OAuthButtons = () => {
 
   const onSteamLogin = () => {
     const steamOpenIDUrl = 'https://steamcommunity.com/openid/login';
-    const redirectUrl = (`${import.meta.env.VITE_APP_FRONT_URL}/steamcallback`); // Update this as needed
-    const realm = (`${import.meta.env.VITE_APP_FRONT_URL}`); // Update this to match your application's URL
+    const redirectUrl = (`${process.env.VITE_APP_FRONT_URL}/steamcallback`); // Update this as needed
+    const realm = (`${process.env.VITE_APP_FRONT_URL}`); // Update this to match your application's URL
     const params = new URLSearchParams({
         'openid.ns': 'http://specs.openid.net/auth/2.0',
         'openid.mode': 'checkid_setup',

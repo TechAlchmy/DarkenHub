@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+require('dotenv').config();
 
 interface RaceTransactionData {
   item_id: string;
@@ -28,7 +29,7 @@ const RaceTransaction = () => {
       if (isFirst.current) {
         isFirst.current = false;
         try {
-          const response = await axios.get(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/raceTransactionDB`, { params: { userID } });
+          const response = await axios.get(`${process.env.VITE_APP_LOCAL_URL}/dota2/raceTransactionDB`, { params: { userID } });
           setRaceTransactionList(response.data.data);
         } catch (error) {
           console.error("Failed to fetch race transactions:", error);
@@ -42,7 +43,7 @@ const RaceTransaction = () => {
     const item = raceTransactionList[index];
     if (item.item_id) {
       try {
-        await axios.post(`${import.meta.env.VITE_APP_LOCAL_URL}/dota2/upgradeRaceTransactionDB`, { item_id: item.item_id, status: newStatus });
+        await axios.post(`${process.env.VITE_APP_LOCAL_URL}/dota2/upgradeRaceTransactionDB`, { item_id: item.item_id, status: newStatus });
         setRaceTransactionList(prevList => prevList.map((trans, i) => (i === index ? { ...trans, status: newStatus } : trans)));
       } catch (error) {
         console.error("Failed to update transaction status:", error);

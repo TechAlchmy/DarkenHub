@@ -7,12 +7,13 @@ import smile from "../../assets/globalchat/smile_emoj.png";
 import { useEffect, useRef, useState } from "react";
 import { IMessage } from "../../types";
 // import { useSelector } from "react-redux";
+require('dotenv').config();
 
 interface props {
   roomId: string
 }
 
-const socket = io(`${import.meta.env.VITE_APP_LOCAL_URL}`);
+const socket = io(`${process.env.VITE_APP_LOCAL_URL}`);
 const GlobalChat = ({roomId} : props) => {
 
   const [messages, setMessages] = useState<IMessage[]>([]);

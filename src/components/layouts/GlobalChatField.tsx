@@ -6,11 +6,12 @@ import { IMessage } from "../../types";
 import avatarImg from "../../assets/profile/Avatar Image.png";
 import sendMessageIcon from "../../assets/sendMessageIcon.png"
 import { message } from "antd";
+require('dotenv').config();
 
 interface Props {
   chatType: string;
 }
-const socket = io(`${import.meta.env.VITE_APP_LOCAL_URL}`);
+const socket = io(`${process.env.VITE_APP_LOCAL_URL}`);
 
 const GlobalChatField = ({chatType}: Props) => {
   const [messages, setMessages] = useState<IMessage[]>([]);
